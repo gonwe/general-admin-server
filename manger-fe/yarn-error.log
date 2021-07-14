@@ -1,0 +1,51 @@
+Arguments: 
+  D:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
+
+PATH: 
+  C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\WINDOWS\system32\WBEM;C:\WINDOWS\system32\WBEM;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MacType;C:\Program Files (x86)\Autodesk\Backburner\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files (x86)\CADSeePlus;D:\Python\Python37\Scripts\;D:\Python\Python37\;C:\Users\瑶光菌\AppData\Local\Microsoft\WindowsApps;C:;Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Bandizip\;"C:\Program Files\Java\jdk1.8.0_151\lib;";C:\Users\瑶光菌\AppData\Local\Programs\Python\Python38\Scripts\;Us;rs\瑶光菌\AppData\Local\Programs\Python\Python38\;rs\瑶光菌\AppData\Roaming\npm;rs\瑶光菌\AppData\Local\Programs\Microsoft VS Code\bin;%J;VA_HOME%\bin;D:\Program Files\nodejs\;D:\Program Files\nodejs\node_global\;d:\Program Files\Git\cmd;C:\Program Files (x86)\Yarn\bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\dotnet\;E:\apache-maven-3.8.1\bin;C:\Program Files\TortoiseSVN\bin;C:\Users\瑶光菌\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\瑶光菌\AppData\Local\Programs\Python\Python38\;D:\Python\Python37\Scripts\;D:\Python\Python37\;C:\Users\瑶光菌\AppData\Local\Microsoft\WindowsApps;C:\Users\瑶光菌\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Java\jdk1.8.0_151\bin;C:\Users\瑶光菌\AppData\Roaming\npm;D:\Program Files\nodejs\node_global\;C:\Users\瑶光菌\AppData\Local\Yarn\bin;C:\Users\瑶光菌\AppData\Local\Programs\Fiddler;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  12.19.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: E:\Koa\manger-fe\package.json: Unexpected token } in JSON at position 398
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:310:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "version": "0.0.0",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "serve": "vite preview"
+    },
+    "dependencies": {
+      "vue": "^3.0.5",
+      "axios": "^0.21.1",
+      "element-plus": "^1.0.2-beta.55",
+      "vite": "^2.4.2",
+      "vue-router": "^4.0.10",
+      "vuex": "^4.0.2"
+    },
+    "devDependencies": {
+      "@vitejs/plugin-vue": "^1.2.5",
+      "@vue/compiler-sfc": "^3.0.5",
+     
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
