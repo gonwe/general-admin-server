@@ -22,6 +22,7 @@ const EnvConfig = {
 export default {
     env,
     mock:true,
+    namespace:'koa-manger',
     baseApi:'www.xxx.com',
     ...EnvConfig[env],
 }
