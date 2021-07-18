@@ -10,6 +10,11 @@ import Welcom from "./Welcom.vue";
 export default {
   name: "login",
   components: { Welcom },
+  mounted() {
+    this.$request.get("/login").then((res) => {
+      console.log(res);
+    });
+  },
   methods: {
     goHome() {
       this.$router.push("/welcom");
