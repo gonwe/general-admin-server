@@ -1,10 +1,17 @@
 <template>
-  <h1>欢迎页</h1>
-  <el-button>去登录</el-button>
+  <h1>欢迎页 {{msg}}</h1>
+  <el-button @click="goLogin">去登录</el-button>
 </template>
 
 <script setup>
 import { defineProps, reactive } from "vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+const goLogin = () => {
+  router.push("/login");
+};
 
 defineProps({
   msg: String,

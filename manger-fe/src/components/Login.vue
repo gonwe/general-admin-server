@@ -1,23 +1,21 @@
 <template>
   <h1>登录页面{{ msg }}</h1>
   <el-button @click="goHome()">返回欢迎页面</el-button>
-
- 
+  <welcom msg="5588" />
 </template>
 
 <script>
-export default{
-  name:'login',
-  methods:{
-    goHome(){
-      this.$router.push('/welcom')
-    }
-  }
-}
+import Welcom from "./Welcom.vue";
 
-
-
-
+export default {
+  name: "login",
+  components: { Welcom },
+  methods: {
+    goHome() {
+      this.$router.push("/welcom");
+    },
+  },
+};
 </script>
 
 <style scoped>
