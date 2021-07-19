@@ -1,20 +1,105 @@
 <template>
-  <h1>主页</h1>
-  <router-view></router-view>
+  <div class="basic-layout">
+    <div class="nav-side"></div>
+    <div class="content-right">
+      <div class="nav-top"></div>
+      <div class="wrapper">
+        <router-view></router-view>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
-import { defineProps, reactive } from 'vue'
+import { defineProps, reactive } from "vue";
 
 defineProps({
-  msg: String
-})
+  msg: String,
+});
 
-const state = reactive({ count: 0 })
+const state = reactive({ count: 0 });
 </script>
 
-<style scoped>
-a {
-  color: #42b983;
+<style lang="scss">
+.basic-layout {
+  position: relative;
+  .nav-side {
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    background-color: #001529;
+    color: #fff;
+    overflow-y: auto;
+    transition: width 0.5s;
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      height: 50px;
+      img {
+        margin: 0 16px;
+        width: 32px;
+        height: 32px;
+      }
+    }
+    .nav-menu {
+      height: calc(100vh - 50px);
+      border-right: none;
+    }
+    // 合并
+    &.fold {
+      width: 64px;
+    }
+    // 展开
+    &.unfold {
+      width: 200px;
+    }
+  }
+  .content-right {
+    margin-left: 200px;
+    // 合并
+    &.fold {
+      margin-left: 64px;
+    }
+    // 展开
+    &.unfold {
+      margin-left: 200px;
+    }
+    .nav-top {
+      height: 50px;
+      line-height: 50px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+      padding: 0 20px;
+      .nav-left {
+        display: flex;
+        align-items: center;
+        .menu-fold {
+          margin-right: 15px;
+          font-size: 18px;
+        }
+      }
+      .user-info {
+        .notice {
+          line-height: 30px;
+          margin-right: 15px;
+        }
+        .user-link {
+          cursor: pointer;
+          color: #409eff;
+        }
+      }
+    }
+    .wrapper {
+      background: #eef0f3;
+      padding: 20px;
+      height: calc(100vh - 50px);
+      .main-page {
+        background: #fff;
+        height: 100%;
+      }
+    }
+  }
 }
 </style>

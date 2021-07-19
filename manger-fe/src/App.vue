@@ -5,9 +5,12 @@
 <script>
 export default {
   name: "app",
-  mounted() {
-    this.$ls.setItem("userInfo", { userName: "zhangsan", age: "300" });
-  },
+  mounted() {},
 };
 </script>
+<style lang='scss'>
+@import "./assets/style/reset.css";
+@import "./assets/style/index.scss";
+</style>
+
 
