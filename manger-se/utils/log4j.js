@@ -16,10 +16,10 @@ const levels = {
 log4js.configure({
   appenders: {
     console: { type: "console" },
-    info: { type: "file", filename: "logs/fileout.log" },
+    info: { type: "file", filename: "/logs/fileout.log" },
     error: {
       type: "dateFile",
-      filename: "logs/errorout.log",
+      filename: "/logs/errorout.log",
       pattern: ".yyyy-MM-dd-hh-mm-ss-SSS",
       alwaysIncludePattern: true, //filename+pattern
     },
