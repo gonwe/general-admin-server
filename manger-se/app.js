@@ -38,9 +38,7 @@ app.use(async (ctx, next) => {
 // routes
 app.use(index.routes(), index.allowedMethods());
 app.use(users.routes(), users.allowedMethods());
- for (const hhh of object) {
-   hfhfh=55
- }
+
 // error-handling
 app.on("error", (err, ctx) => {
   console.error("server error", err, ctx);

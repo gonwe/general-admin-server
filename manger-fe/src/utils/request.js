@@ -48,8 +48,12 @@ service.interceptors.response.use((res) => {
  * @returns
  */
 function request(options) {
-    // debugger
+  // debugger
   options.method = options.method || "get";
+
+  if (typeof options.mock != "undefined") {
+    config.mock = options.mock;
+  }
   // 预防生产环境出问题
   if (config.env === "prod") {
     service.defaults.baseURL = config.baseApi;
