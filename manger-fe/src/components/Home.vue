@@ -26,7 +26,7 @@
             <i class="el-icon-s-fold"></i>
           </div>
           <div class="bread">
-            <!-- <BreadCrumb /> -->
+            <BreadCrumb />
           </div>
         </div>
         <div class="user-info">
@@ -63,9 +63,10 @@
 
 <script>
 import TreeMenu from "./TreeMenu.vue";
+import BreadCrumb from "./BreadCrumb.vue";
 export default {
   name: "Home",
-  components: { TreeMenu },
+  components: { TreeMenu,BreadCrumb },
   data() {
     return {
       userInfo: this.$store.state.userInfo,
