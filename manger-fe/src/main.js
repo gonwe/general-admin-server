@@ -12,6 +12,6 @@ console.log(import.meta.env);
 const app = createApp(App);
 console.log(storage.getItem("userInfo"));
 app.config.globalProperties.$request = request; //全局属性挂载request
-app.config.globalProperties.$ls = storage; //全局属性挂载storage
+app.config.globalProperties.$storage = storage; //全局属性挂载storage
 app.config.globalProperties.$api = api; //全局属性挂载api
 app.use(router).use(store).use(ElementPlus).mount("#app");

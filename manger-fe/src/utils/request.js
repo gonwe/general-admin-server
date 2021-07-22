@@ -5,6 +5,7 @@ import config from "../config";
 import axios from "axios";
 import { ElMessage } from "element-plus";
 import router from "../router";
+import storage from "./storage";
 
 // 定义错误提示
 const TONKEN_INVALID = "Tenkon认证失败，请重新登陆";
@@ -19,8 +20,9 @@ const service = axios.create({
 // 请求拦截
 service.interceptors.request.use((req) => {
   // TODO
+  const { token } = storage.getItem("userInfo");
   const headers = req.headers;
-  if (!headers.Authorization) headers.Authorization = "xxxxgonwe";
+  if (!headers.Authorization) headers.Authorization = "Bearer " + token;
   return req;
 });
 
