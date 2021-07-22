@@ -48,11 +48,7 @@
 export default {
   name: "login",
   components: {},
-  // mounted() {
-  //   this.$request.get("/login").then((res) => {
-  //     console.log(res);
-  //   });
-  // },
+
   data() {
     return {
       loginForm: {

@@ -10,7 +10,15 @@ export default {
       url: "/users/login",
       data: params,
       method: "post",
-    //   mock: false,
+      //   mock: false,
     });
   },
-};
+
+  noticeCount(params) {
+    return request({
+      url: "/api/notices",
+      data: params,
+      method: "get"
+    });
+  },
+}

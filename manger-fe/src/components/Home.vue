@@ -1,8 +1,60 @@
 <template>
   <div class="basic-layout">
-    <div class="nav-side"></div>
+    <div class="nav-side">
+      <!-- 系统LOGO -->
+      <!-- <div class="logo">
+        <img src="./../assets/logo.png" />
+        <span>Manager</span>
+      </div> -->
+      <!-- 导航菜单 -->
+      <!-- <el-menu
+        :default-active="activeMenu"
+        background-color="#001529"
+        text-color="#fff"
+        router
+        :collapse="isCollapse"
+        class="nav-menu"
+      >
+        <tree-menu :userMenu="userMenu" />
+      </el-menu> -->
+
+      <TreeMenu />
+    </div>
     <div class="content-right">
-      <div class="nav-top"></div>
+      <div class="nav-top">
+        <div class="nav-left">
+          <div class="menu-fold">
+            <i class="el-icon-s-fold"></i>
+          </div>
+          <div class="bread">
+            <!-- <BreadCrumb /> -->
+          </div>
+        </div>
+        <div class="user-info">
+          <el-badge
+            class="notice"
+            type="danger"
+            :is-dot="noticeCount > 0 ? true : false"
+          >
+            <i class="el-icon-bell"></i>
+          </el-badge>
+          <el-dropdown>
+            <span class="user-link">
+              {{ userInfo.userName }}
+              <i class="el-icon--right"></i>
+            </span>
+
+            <template #dropdown>
+              <el-dropdown-menu>
+                <el-dropdown-item command="email"
+                  >邮箱：{{ userInfo.userEmail }}</el-dropdown-item
+                >
+                <el-dropdown-item command="logout">退出</el-dropdown-item>
+              </el-dropdown-menu>
+            </template>
+          </el-dropdown>
+        </div>
+      </div>
       <div class="wrapper">
         <router-view></router-view>
       </div>
@@ -10,14 +62,34 @@
   </div>
 </template>
 
-<script setup>
-import { defineProps, reactive } from "vue";
-
-defineProps({
-  msg: String,
-});
-
-const state = reactive({ count: 0 });
+<script>
+import TreeMenu from "./TreeMenu.vue";
+export default {
+  name: "Home",
+  components: { TreeMenu },
+  data() {
+    return {
+      userInfo: this.$store.state.userInfo,
+      noticeCount: "",
+    };
+  },
+  mounted() {
+    this.getNoticesCount();
+  },
+  methods: {
+    async getNoticesCount() {
+      try {
+        const { count } = await this.$api.noticeCount();
+        console.log(count);
+        if (count) {
+          this.noticeCount = count;
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  },
+};
 </script>
 
 <style lang="scss">

@@ -7,7 +7,7 @@ import config from "../config";
 export default {
   //获取初始化命名空间
   getStorage() {
-    return JSON.parse(window.localStorage.getItem(config.namespace) || {});
+    return JSON.parse(window.localStorage.getItem(config.namespace) )|| {};
   },
 
   // 存储数据
