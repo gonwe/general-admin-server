@@ -7,7 +7,7 @@
         <span>Manager</span>
       </div> -->
       <!-- 导航菜单 -->
-      <!-- <el-menu
+      <el-menu
         :default-active="activeMenu"
         background-color="#001529"
         text-color="#fff"
@@ -15,10 +15,9 @@
         :collapse="isCollapse"
         class="nav-menu"
       >
-        <tree-menu :userMenu="userMenu" />
-      </el-menu> -->
-
-      <TreeMenu />
+        <!-- <tree-menu :userMenu="userMenu" /> -->
+        <TreeMenu :userMenu="userMenu" />
+      </el-menu>
     </div>
     <div class="content-right">
       <div class="nav-top">
@@ -70,11 +69,14 @@ export default {
   data() {
     return {
       userInfo: this.$store.state.userInfo,
-      noticeCount: "",
+      noticeCount: 0,
+      userMenu: [],
+      activeMenu:location.hash.slice(1)
     };
   },
   mounted() {
     this.getNoticesCount();
+    this.getMenuList();
   },
   methods: {
     async getNoticesCount() {
@@ -84,6 +86,14 @@ export default {
         if (count) {
           this.noticeCount = count;
         }
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    async getMenuList() {
+      try {
+        const list = await this.$api.getMenuList();
+        this.userMenu = list;
       } catch (error) {
         console.log(error);
       }

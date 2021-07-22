@@ -16,9 +16,17 @@ export default {
 
   noticeCount(params) {
     return request({
-      url: "/api/notices",
+      url: "/leave/count",
       data: params,
-      method: "get"
+      method: "get",
     });
   },
-}
+
+  getMenuList() {
+    return request({
+      url: "/menu/list",
+      method: "get",
+      data: {},
+    });
+  },
+};

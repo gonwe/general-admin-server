@@ -1,41 +1,35 @@
 <template>
-  <el-menu default-active="2" class="el-menu-vertical-demo">
-    <el-submenu index="1">
+  <template v-for="menu in userMenu">
+    <el-submenu
+      v-if="menu.children && menu.children.length > 0 && menu.children[0].menuType == 1"
+      :key="menu._id"
+      :index="menu.path"
+    >
       <template #title>
-        <i class="el-icon-location"></i>
-        <span>导航一</span>
+        <i :class="menu.icon"></i>
+        <span>{{ menu.menuName }}</span>
       </template>
-      <el-menu-item-group>
-        <template #title>分组一</template>
-        <el-menu-item index="1-1">选项1</el-menu-item>
-        <el-menu-item index="1-2">选项2</el-menu-item>
-      </el-menu-item-group>
-      <el-menu-item-group title="分组2">
-        <el-menu-item index="1-3">选项3</el-menu-item>
-      </el-menu-item-group>
-      <el-submenu index="1-4">
-        <template #title>选项4</template>
-        <el-menu-item index="1-4-1">选项1</el-menu-item>
-      </el-submenu>
+      <tree-menu :userMenu="menu.children"></tree-menu>
     </el-submenu>
-    <el-menu-item index="2">
-      <i class="el-icon-menu"></i>
-      <template #title>导航二</template>
-    </el-menu-item>
-    <el-menu-item index="3" disabled>
-      <i class="el-icon-document"></i>
-      <template #title>导航三</template>
-    </el-menu-item>
-    <el-menu-item index="4">
-      <i class="el-icon-setting"></i>
-      <template #title>导航四</template>
-    </el-menu-item>
-  </el-menu>
+
+    <el-menu-item
+      v-else-if="menu.menuType == 1"
+      :index="menu.path"
+      :key="menu._id"
+      >{{ menu.menuName }}</el-menu-item
+    >
+  </template>
 </template>
 
 <script>
 export default {
   name: "TreeMenu",
+  props: {
+    userMenu: Array,
+    default() {
+      return [];
+    },
+  },
   data() {
     return {};
   },
