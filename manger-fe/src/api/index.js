@@ -19,6 +19,7 @@ export default {
       url: "/leave/count",
       data: params,
       method: "get",
+      mock: true
     });
   },
 
@@ -27,6 +28,15 @@ export default {
       url: "/menu/list",
       method: "get",
       data: {},
+      mock: true
+    });
+  },
+  getUserList(params) {
+    return request({
+      url: "/users/list",
+      method: "get",
+      data: params,
+      mock: true
     });
   },
 };

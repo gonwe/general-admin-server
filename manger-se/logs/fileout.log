@@ -213,3 +213,10 @@
 [2021-07-23T13:18:16.694] [INFO] info - post params:{"userName":"admin","userPwd":123}
 [2021-07-23T13:19:03.414] [INFO] info - ***数据库连接成功***
 [2021-07-23T13:19:14.122] [INFO] info - ***数据库连接成功***
+[2021-07-23T13:21:16.041] [INFO] info - ***数据库连接成功***
+[2021-07-23T13:34:33.873] [INFO] info - get params:{}
+[2021-07-23T13:34:33.874] [INFO] info - post params:{}
+[2021-07-23T13:34:33.943] [INFO] info - get params:{}
+[2021-07-23T13:34:33.944] [INFO] info - post params:{}
+[2021-07-23T15:47:47.374] [INFO] info - get params:{}
+[2021-07-23T15:47:47.375] [INFO] info - post params:{"userName":"admin","userPwd":123}

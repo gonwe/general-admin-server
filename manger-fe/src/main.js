@@ -14,4 +14,5 @@ console.log(storage.getItem("userInfo"));
 app.config.globalProperties.$request = request; //全局属性挂载request
 app.config.globalProperties.$storage = storage; //全局属性挂载storage
 app.config.globalProperties.$api = api; //全局属性挂载api
-app.use(router).use(store).use(ElementPlus).mount("#app");
+// app.config.globalProperties.$api = api;
+app.use(router).use(store).use(ElementPlus,{size:'small'}).mount("#app");

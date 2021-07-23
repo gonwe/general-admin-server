@@ -66,13 +66,14 @@ import TreeMenu from "./TreeMenu.vue";
 import BreadCrumb from "./BreadCrumb.vue";
 export default {
   name: "Home",
-  components: { TreeMenu,BreadCrumb },
+  components: { TreeMenu, BreadCrumb },
   data() {
     return {
+      isCollapse: false,
       userInfo: this.$store.state.userInfo,
       noticeCount: 0,
       userMenu: [],
-      activeMenu:location.hash.slice(1)
+      activeMenu: location.hash.slice(1),
     };
   },
   mounted() {
@@ -102,6 +103,7 @@ export default {
   },
 };
 </script>
+
 
 <style lang="scss">
 .basic-layout {
