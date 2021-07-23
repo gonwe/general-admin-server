@@ -31,20 +31,23 @@ module.exports = {
       skipIndex,
     };
   },
-  success(data = "", msg = "", code = CODE.SUCCESS) {
+  success(data = "", msg = "", code = CODE.SUCCESS,success=true) {
     log4js.debug(msg);
     return {
       code,
+      success,
       data,
       msg,
     };
   },
-  fail(msg = "", data = "", code = CODE.BUSSINESS_ERROR) {
+  fail(msg = "",  code = CODE.BUSSINESS_ERROR,data = "",success=false) {
     log4js.debug(msg);
     return {
       code,
+      success,
       data,
       msg,
     };
   },
+  CODE
 };
