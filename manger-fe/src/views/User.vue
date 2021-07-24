@@ -27,9 +27,9 @@
     <div class="base-table">
       <div class="action">
         <el-button type="primary">新增</el-button>
-        <el-button type="danger">批量删除</el-button>
+        <el-button type="danger" @click="handlePathDel">批量删除</el-button>
       </div>
-      <el-table :data="userList">
+      <el-table :data="userList" @selection-change="handleSelectionChange">
         <el-table-column type="selection" width="55" />
         <el-table-column
           v-for="item of columns"
@@ -37,6 +37,7 @@
           :prop="item.prop"
           :label="item.label"
           :width="item.width"
+          :formatter="item.formatter"
         >
         </el-table-column>
         <el-table-column fixed="right" label="操作" width="150">
@@ -47,7 +48,9 @@
               size="mini"
               >编辑</el-button
             >
-            <el-button type="danger" size="mini">删除</el-button>
+            <el-button type="danger" size="mini" @click="handleDel(scope.row)"
+              >删除</el-button
+            >
           </template>
         </el-table-column>
       </el-table>
@@ -74,6 +77,7 @@ export default {
   setup() {
     // 获取Vue3的ctx对象 appContext.config.globalProperties是用户自定义的全局
     const { appContext, ctx } = getCurrentInstance();
+    const that = appContext.config.globalProperties;
     // 初始化用户数据
     const user = reactive({
       state: 0,
@@ -85,6 +89,8 @@ export default {
     });
     // 获取用户返回的对象
     const userList = ref([]);
+    // 批量删除数据
+    const checkedUserIds = ref([]);
     // 定义数据表头
     const columns = reactive([
       {
@@ -100,12 +106,25 @@ export default {
         prop: "userEmail",
       },
       {
-        label: "用户权限",
+        label: "用户角色",
         prop: "role",
+        formatter(row, column, value) {
+          return {
+            0: "管理员",
+            1: "普通用户",
+          }[value];
+        },
       },
       {
         label: "用户状态",
         prop: "state",
+        formatter(row, column, value) {
+          return {
+            1: "在职",
+            2: "离职",
+            3: "试用期",
+          }[value];
+        },
       },
       {
         label: "创建时间",
@@ -118,18 +137,17 @@ export default {
     ]);
     //  初始化接口调用
     onMounted(() => {
-      console.log(appContext.config.globalProperties);
+      console.log(that);
       console.log(ctx);
       getUserList();
     });
     // 获取用户列表
     const getUserList = async () => {
       try {
-        const { list, page } =
-          await appContext.config.globalProperties.$api.getUserList({
-            ...pager,
-            ...user,
-          });
+        const { list, page } = await that.$api.getUserList({
+          ...pager,
+          ...user,
+        });
         userList.value = list;
         pager.total = page.total;
       } catch (error) {
@@ -150,15 +168,50 @@ export default {
       pager.pageNum = curent;
       getUserList();
     };
+
+    // 表格多选
+    const handleSelectionChange = (list) => {
+      let arr = [];
+      list.map((i) => {
+        arr.push(i.userId);
+        // console.log(i.userId);
+      });
+      checkedUserIds.value = arr;
+    };
+
+    // 删除用户
+    const handleDel = async (row) => {
+      await that.$api.userDel({
+        userIds: [row.userId],
+      });
+      that.$message.success("删除成功！");
+      getUserList();
+    };
+    // 批量删除用户
+    const handlePathDel = async () => {
+      const { nModified } = await that.$api.userDel({
+        userIds: checkedUserIds.value,
+      });
+      if (nModified > 0) {
+        that.$message.success("删除成功！");
+        getUserList();
+      } else {
+        that.$message.error("删除失败！");
+      }
+    };
     return {
       user,
       pager,
       columns,
       userList,
+      checkedUserIds,
       getUserList,
       handleQuery,
       handleReset,
       handleCurrentChange,
+      handleSelectionChange,
+      handleDel,
+      handlePathDel,
     };
   },
 };

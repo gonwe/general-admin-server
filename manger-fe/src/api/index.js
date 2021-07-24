@@ -31,11 +31,21 @@ export default {
       mock: true,
     });
   },
+
   getUserList(params) {
     console.log(params);
     return request({
       url: "/users/list",
       method: "get",
+      data: params,
+      mock: true,
+    });
+  },
+  userDel(params) {
+    console.log(params);
+    return request({
+      url: "/users/delete",
+      method: "post",
       data: params,
       mock: true,
     });
