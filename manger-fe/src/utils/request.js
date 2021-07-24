@@ -50,9 +50,11 @@ service.interceptors.response.use((res) => {
  * @returns
  */
 function request(options) {
-  // debugger
+  // debugger;
   options.method = options.method || "get";
-
+  if (options.method.toLowerCase() == "get") {
+    options.params = options.data;
+  }
   if (typeof options.mock != "undefined") {
     config.mock = options.mock;
   }
