@@ -26,7 +26,7 @@
     </div>
     <div class="base-table">
       <div class="action">
-        <el-button type="primary">新增</el-button>
+        <el-button type="primary" @click="addUserModel">新增</el-button>
         <el-button type="danger" @click="handlePathDel">批量删除</el-button>
       </div>
       <el-table :data="userList" @selection-change="handleSelectionChange">
@@ -65,6 +65,66 @@
         >
         </el-pagination>
       </div>
+
+      <el-dialog title="新增用户" v-model="userModel">
+        <el-form :model="addUserForm" ref="userFormAdd" :rules="rules">
+          <el-form-item label="用户名" :label-width="110" prop="userName">
+            <el-input
+              v-model="addUserForm.uaserName"
+              placeholder="请输入"
+            ></el-input>
+          </el-form-item>
+          <el-form-item label="邮箱" :label-width="110" prop="email">
+            <el-input v-model="addUserForm.email" placeholder="请输入">
+              <template #append>@gonwe.cn</template></el-input
+            >
+          </el-form-item>
+          <el-form-item label="手机号" :label-width="110" prop="mobile">
+            <el-input
+              v-model="addUserForm.mobile"
+              placeholder="请输入"
+            ></el-input>
+          </el-form-item>
+          <el-form-item label="岗位" :label-width="110" prop="job">
+            <el-input v-model="addUserForm.job" placeholder="请输入"></el-input>
+          </el-form-item>
+          <el-form-item label="状态" :label-width="110" prop="state">
+            <el-select v-model="addUserForm.state" placeholder="请选择">
+              <el-option label="在职" :value="1"></el-option>
+              <el-option label="离职" :value="2"></el-option>
+              <el-option label="试用期" :value="3"></el-option>
+            </el-select>
+          </el-form-item>
+          <el-form-item
+            label="系统角色"
+            :label-width="110"
+            style="width: 100%"
+            prop="roleList"
+          >
+            <el-select v-model="addUserForm.roleList" placeholder="请选择">
+              <el-option label="在职" :value="1"></el-option>
+            </el-select>
+          </el-form-item>
+
+          <el-form-item label="部门" :label-width="110" prop="deptId">
+            <el-cascader
+              placeholder="请选择"
+              :options="[]"
+              v-model="addUserForm.deptId"
+              :props="{ checkStrictly: true, label: 'deptName', value: '_id' }"
+              clearable
+            ></el-cascader>
+          </el-form-item>
+        </el-form>
+        <template #footer>
+          <span class="dialog-footer">
+            <el-button @click="addUserModel = false">取 消</el-button>
+            <el-button type="primary" @click="addUserModel = false"
+              >确 定</el-button
+            >
+          </span>
+        </template>
+      </el-dialog>
     </div>
   </div>
 </template>
@@ -89,8 +149,21 @@ export default {
     });
     // 获取用户返回的对象
     const userList = ref([]);
+    const userModel = ref(false);
     // 批量删除数据
     const checkedUserIds = ref([]);
+
+    // 新增用户数据
+    const addUserForm = reactive({});
+    // 新增用户校验
+    const rules = reactive({
+      userName: [{ required: true, message: "请输入", trigger: "blur" }],
+      email: [{ required: true, message: "请输入", trigger: "blur" }],
+      mobile: [
+        { pattern: /^1[3-9](\d{9})$/, message: "请输入正确的手机号", trigger: "blur" },
+      ],
+      deptId: [{ required: true, message: "请输入", trigger: "blur" }],
+    });
     // 定义数据表头
     const columns = reactive([
       {
@@ -199,12 +272,20 @@ export default {
         that.$message.error("删除失败！");
       }
     };
+
+    // 打开新增用户
+    const addUserModel = () => {
+      userModel.value = true;
+    };
     return {
       user,
       pager,
       columns,
       userList,
       checkedUserIds,
+      userModel,
+      addUserForm,
+      rules,
       getUserList,
       handleQuery,
       handleReset,
@@ -212,6 +293,7 @@ export default {
       handleSelectionChange,
       handleDel,
       handlePathDel,
+      addUserModel,
     };
   },
 };
