@@ -154,13 +154,19 @@ export default {
     const checkedUserIds = ref([]);
 
     // 新增用户数据
-    const addUserForm = reactive({});
+    const addUserForm = reactive({
+      state: 0,
+    });
     // 新增用户校验
     const rules = reactive({
       userName: [{ required: true, message: "请输入", trigger: "blur" }],
       email: [{ required: true, message: "请输入", trigger: "blur" }],
       mobile: [
-        { pattern: /^1[3-9](\d{9})$/, message: "请输入正确的手机号", trigger: "blur" },
+        {
+          pattern: /^1[3-9](\d{9})$/,
+          message: "请输入正确的手机号",
+          trigger: "blur",
+        },
       ],
       deptId: [{ required: true, message: "请输入", trigger: "blur" }],
     });

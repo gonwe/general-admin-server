@@ -28,6 +28,6 @@ export default {
   env,
   mock: false,
   namespace: "koa-manger",
-  baseApi: "www.xxx.com",
+  // baseApi: "/api",
   ...EnvConfig[env],
 };

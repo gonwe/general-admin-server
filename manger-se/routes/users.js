@@ -29,10 +29,10 @@ router.post("/login", async (ctx) => {
     if (res) {
       ctx.body = util.success(data,"登录成功！");
     } else {
-      ctx.body = util.fail("账号或者密码不正确");
+      ctx.body = util.fail("账号或者密码不正确", util.CODE.USER_LOGIN_ERROR);
     }
   } catch (error) {
-    ctx.body = util.fail(error.msg);
+    ctx.body = util.fail(error.msg,util.CODE.USER_LOGIN_ERROR);
   }
 });
 

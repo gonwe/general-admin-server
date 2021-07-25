@@ -31,7 +31,7 @@ module.exports = {
       skipIndex,
     };
   },
-  success(data = "", msg = "", code = CODE.SUCCESS,success=true) {
+  success(data = "", msg = "", code = CODE.SUCCESS, success = true) {
     log4js.debug(msg);
     return {
       code,
@@ -40,7 +40,7 @@ module.exports = {
       msg,
     };
   },
-  fail(msg = "",  code = CODE.BUSSINESS_ERROR,data = "",success=false) {
+  fail(msg = "", code = CODE.BUSSINESS_ERROR, data = "", success = false) {
     log4js.debug(msg);
     return {
       code,
@@ -49,5 +49,5 @@ module.exports = {
       msg,
     };
   },
-  CODE
+  CODE,
 };
