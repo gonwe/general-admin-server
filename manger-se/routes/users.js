@@ -10,7 +10,7 @@ const jwt = require("jsonwebtoken");
 router.prefix("/users");
 
 router.post("/login", async (ctx) => {
-  // console.log(ctx.request.body);
+  console.log(ctx.request.body);
   // log4js.info(ctx.request.body);
   try {
     const { userName, userPwd } = ctx.request.body;

@@ -54,12 +54,12 @@ app.use(koajwt({secret:"gonwe"}).unless({ path: [/^\/api\/users\/login/] }))
 // routes
 router.prefix("/api");
 
-router.get("/leave/count",(ctx)=>{
-  // const token = ctx.request.headers.authorization.split(" ")[1]
-  // // console.log(ctx.request.headers);
-  // const playload = jwt.verify(token,"gonwe")
-  ctx.body="nody"
-})
+// router.get("/leave/count",(ctx)=>{
+//   // const token = ctx.request.headers.authorization.split(" ")[1]
+//   // // console.log(ctx.request.headers);
+//   // const playload = jwt.verify(token,"gonwe")
+//   ctx.body="nody"
+// })
 router.use(users.routes(), users.allowedMethods());
 app.use(router.routes(), users.allowedMethods());
 

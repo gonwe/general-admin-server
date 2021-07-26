@@ -20,7 +20,7 @@
         </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="handleQuery()">查询</el-button>
-          <el-button @click="handleReset()">重置</el-button>
+          <el-button @click="handleReset('userForm')">重置</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -58,7 +58,6 @@
         <el-pagination
           background
           layout="prev, pager, next"
-          @size-change="handleSizeChange"
           @current-change="handleCurrentChange"
           :currentPage="pager.pageNum"
           :total="pager.total"
@@ -68,14 +67,14 @@
 
       <el-dialog title="新增用户" v-model="userModel">
         <el-form :model="addUserForm" ref="userFormAdd" :rules="rules">
-          <el-form-item label="用户名" :label-width="110" prop="userName">
+          <el-form-item label="用户名" :label-width="110" prop="user">
             <el-input
               v-model="addUserForm.uaserName"
               placeholder="请输入"
             ></el-input>
           </el-form-item>
-          <el-form-item label="邮箱" :label-width="110" prop="email">
-            <el-input v-model="addUserForm.email" placeholder="请输入">
+          <el-form-item label="邮箱" :label-width="110" prop="userEmail">
+            <el-input v-model="addUserForm.userEmail" placeholder="请输入">
               <template #append>@gonwe.cn</template></el-input
             >
           </el-form-item>
@@ -95,21 +94,27 @@
               <el-option label="试用期" :value="3"></el-option>
             </el-select>
           </el-form-item>
-          <el-form-item
-            label="系统角色"
-            :label-width="110"
-            style="width: 100%"
-            prop="roleList"
-          >
-            <el-select v-model="addUserForm.roleList" placeholder="请选择">
-              <el-option label="在职" :value="1"></el-option>
+          <el-form-item label="系统角色" :label-width="110" prop="roleList">
+            <el-select
+              v-model="addUserForm.roleList"
+              placeholder="请选择"
+              style="width: 100%"
+              multiple
+            >
+              <el-option
+                v-for="role in rolesList"
+                :key="role._id"
+                :label="role.roleName"
+                :value="role._id"
+              />
             </el-select>
           </el-form-item>
 
           <el-form-item label="部门" :label-width="110" prop="deptId">
             <el-cascader
+              style="width: 100%"
               placeholder="请选择"
-              :options="[]"
+              :options="deptList"
               v-model="addUserForm.deptId"
               :props="{ checkStrictly: true, label: 'deptName', value: '_id' }"
               clearable
@@ -118,10 +123,8 @@
         </el-form>
         <template #footer>
           <span class="dialog-footer">
-            <el-button @click="addUserModel = false">取 消</el-button>
-            <el-button type="primary" @click="addUserModel = false"
-              >确 定</el-button
-            >
+            <el-button @click="handleClose()">取 消</el-button>
+            <el-button type="primary" @click="handleSumbit()">确 定</el-button>
           </span>
         </template>
       </el-dialog>
@@ -130,7 +133,7 @@
 </template>
 
 <script>
-import { getCurrentInstance, onMounted, reactive, ref } from "vue";
+import { getCurrentInstance, onMounted, reactive, ref, toRaw } from "vue";
 
 export default {
   name: "User",
@@ -149,18 +152,25 @@ export default {
     });
     // 获取用户返回的对象
     const userList = ref([]);
+    // 所有角色列表
+    const rolesList = ref([]);
+    // 部门列表
+    const deptList = ref([]);
+    // 默认新增弹窗
     const userModel = ref(false);
+    // 提交编辑状态
+    const action = ref("add");
     // 批量删除数据
     const checkedUserIds = ref([]);
 
     // 新增用户数据
     const addUserForm = reactive({
-      state: 0,
+      state: 3,
     });
     // 新增用户校验
     const rules = reactive({
-      userName: [{ required: true, message: "请输入", trigger: "blur" }],
-      email: [{ required: true, message: "请输入", trigger: "blur" }],
+      // user: [{ required: true, message: "请输入", trigger: "blur" }],
+      userEmail: [{ required: true, message: "请输入", trigger: "blur" }],
       mobile: [
         {
           pattern: /^1[3-9](\d{9})$/,
@@ -216,9 +226,11 @@ export default {
     ]);
     //  初始化接口调用
     onMounted(() => {
-      console.log(that);
-      console.log(ctx);
+      // console.log(that);
+      // console.log(ctx);
       getUserList();
+      getDeptList();
+      getRoleList();
     });
     // 获取用户列表
     const getUserList = async () => {
@@ -238,9 +250,9 @@ export default {
       getUserList();
     };
     // 重置用户搜索列表
-    const handleReset = () => {
-      console.log(ctx);
-      ctx.$refs.userForm.resetFields();
+    const handleReset = (formName) => {
+      // console.log(ctx);
+      ctx.$refs[formName].resetFields();
     };
     // 分页参数处理
     const handleCurrentChange = (curent) => {
@@ -278,11 +290,43 @@ export default {
         that.$message.error("删除失败！");
       }
     };
-
     // 打开新增用户
     const addUserModel = () => {
+      action.value = "add";
       userModel.value = true;
     };
+
+    // 获取部门列表
+    const getDeptList = async () => {
+      const list = await that.$api.getDeptList();
+      deptList.value = list;
+    };
+    // 获取权限列表
+    const getRoleList = async () => {
+      const list = await that.$api.getRoleList();
+      rolesList.value = list;
+    };
+    const handleClose = () => {
+      userModel.value = false;
+      handleReset("userFormAdd");
+    };
+    const handleSumbit = () => {
+      ctx.$refs.userFormAdd.validate(async (valid) => {
+        if (valid) {
+          let params = toRaw(addUserForm); //toRaw相当于深拷贝 不影响原始数据
+          params.userEmail += "@gonwe.com";
+          params.action = action;
+          let res = await that.$api.userSumbit(params);
+          if (res) {
+            userModel.value = false;
+            that.$message.success("用户创建成功！");
+            handleReset("userFormAdd");
+            getUserList();
+          }
+        }
+      });
+    };
+
     return {
       user,
       pager,
@@ -292,6 +336,9 @@ export default {
       userModel,
       addUserForm,
       rules,
+      rolesList,
+      deptList,
+      action,
       getUserList,
       handleQuery,
       handleReset,
@@ -300,6 +347,10 @@ export default {
       handleDel,
       handlePathDel,
       addUserModel,
+      getDeptList,
+      getRoleList,
+      handleClose,
+      handleSumbit,
     };
   },
 };

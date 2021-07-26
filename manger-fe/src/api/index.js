@@ -6,11 +6,12 @@ import request from "../utils/request";
 
 export default {
   login(params) {
+    console.log(params);
     return request({
       url: "/users/login",
       data: params,
       method: "post",
-      //   mock: false,
+      mock: false,
     });
   },
 
@@ -45,6 +46,33 @@ export default {
     console.log(params);
     return request({
       url: "/users/delete",
+      method: "post",
+      data: params,
+      mock: true,
+    });
+  },
+  getDeptList(params) {
+    console.log(params);
+    return request({
+      url: "/dept/list",
+      method: "get",
+      data: params,
+      mock: true,
+    });
+  },
+  getRoleList(params) {
+    console.log(params);
+    return request({
+      url: "/roles/alllist",
+      method: "get",
+      data: params,
+      mock: true,
+    });
+  },
+  userSumbit(params) {
+    console.log(params);
+    return request({
+      url: "/users/operate",
       method: "post",
       data: params,
       mock: true,

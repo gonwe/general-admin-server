@@ -582,3 +582,8 @@ yallist@^3.0.2:
   version "3.1.1"
   resolved "https://registry.nlark.com/yallist/download/yallist-3.1.1.tgz#dbb7daf9bfd8bac9ab45ebf602b8cbad0d5d08fd"
   integrity sha1-27fa+b/YusmrRev2ArjLrQ1dCP0=
+
+yarn@^1.22.10:
+  version "1.22.10"
+  resolved "https://registry.npm.taobao.org/yarn/download/yarn-1.22.10.tgz#c99daa06257c80f8fa2c3f1490724e394c26b18c"
+  integrity sha1-yZ2qBiV8gPj6LD8UkHJOOUwmsYw=
