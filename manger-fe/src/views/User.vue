@@ -42,10 +42,7 @@
         </el-table-column>
         <el-table-column fixed="right" label="操作" width="150">
           <template #default="scope">
-            <el-button
-              @click="handleClick(scope.row)"
-              type="primary"
-              size="mini"
+            <el-button @click="handleEdit(scope.row)" type="primary" size="mini"
               >编辑</el-button
             >
             <el-button type="danger" size="mini" @click="handleDel(scope.row)"
@@ -67,14 +64,19 @@
 
       <el-dialog title="新增用户" v-model="userModel">
         <el-form :model="addUserForm" ref="userFormAdd" :rules="rules">
-          <el-form-item label="用户名" :label-width="110" prop="user">
+          <el-form-item label="用户名" :label-width="110" prop="userName">
             <el-input
-              v-model="addUserForm.uaserName"
+              :disabled="action == 'edit'"
+              v-model="addUserForm.userName"
               placeholder="请输入"
             ></el-input>
           </el-form-item>
           <el-form-item label="邮箱" :label-width="110" prop="userEmail">
-            <el-input v-model="addUserForm.userEmail" placeholder="请输入">
+            <el-input
+              v-model="addUserForm.userEmail"
+              placeholder="请输入"
+              :disabled="action == 'edit'"
+            >
               <template #append>@gonwe.cn</template></el-input
             >
           </el-form-item>
@@ -169,7 +171,7 @@ export default {
     });
     // 新增用户校验
     const rules = reactive({
-      // user: [{ required: true, message: "请输入", trigger: "blur" }],
+      userName: [{ required: true, message: "请输入", trigger: "blur" }],
       userEmail: [{ required: true, message: "请输入", trigger: "blur" }],
       mobile: [
         {
@@ -294,6 +296,7 @@ export default {
     const addUserModel = () => {
       action.value = "add";
       userModel.value = true;
+      handleReset("userFormAdd");
     };
 
     // 获取部门列表
@@ -306,10 +309,12 @@ export default {
       const list = await that.$api.getRoleList();
       rolesList.value = list;
     };
+    // 关闭弹窗
     const handleClose = () => {
       userModel.value = false;
       handleReset("userFormAdd");
     };
+    // 提交注册
     const handleSumbit = () => {
       ctx.$refs.userFormAdd.validate(async (valid) => {
         if (valid) {
@@ -326,7 +331,15 @@ export default {
         }
       });
     };
-
+    // 编辑弹窗
+    const handleEdit = (row) => {
+      console.log(row);
+      action.value = "edit";
+      userModel.value = true;
+      ctx.$nextTick(() => {
+        Object.assign(addUserForm, row);
+      });
+    };
     return {
       user,
       pager,
@@ -351,6 +364,7 @@ export default {
       getRoleList,
       handleClose,
       handleSumbit,
+      handleEdit,
     };
   },
 };
