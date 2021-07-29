@@ -66,4 +66,9 @@ router.get("list", async (ctx) => {
   }
 });
 
+// 用户删除
+router.post("delete", (ctx) => {
+  // todo;
+});
+
 module.exports = router;
