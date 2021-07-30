@@ -45,7 +45,10 @@
             <el-button @click="handleEdit(scope.row)" type="primary" size="mini"
               >编辑</el-button
             >
-            <el-button type="danger" size="mini" @click="handleDel(scope.row)"
+            <el-button
+              type="danger"
+              size="mini"
+              @click="handleDel(scope.row._id)"
               >删除</el-button
             >
           </template>
@@ -66,22 +69,11 @@
           </el-form-item>
 
           <el-form-item label="菜单类型" :label-width="110" prop="menuType">
-            <el-radio
-              :disabled="action == 'edit'"
-              v-model="addmenuForm.menuType"
-              :label="1"
-              >菜单</el-radio
-            >
-            <el-radio
-              :disabled="action == 'edit'"
-              v-model="addmenuForm.menuType"
-              :label="2"
-              >按钮</el-radio
-            >
+            <el-radio v-model="addmenuForm.menuType" :label="1">菜单</el-radio>
+            <el-radio v-model="addmenuForm.menuType" :label="2">按钮</el-radio>
           </el-form-item>
           <el-form-item label="菜单名称" :label-width="110" prop="menuName">
             <el-input
-              :disabled="action == 'edit'"
               v-model="addmenuForm.menuName"
               placeholder="请输入"
             ></el-input>
@@ -272,8 +264,18 @@ export default {
         this.addmenuForm.parentId = [...row.parentId, row._id].filter((i) => i);
       }
     },
-    handleEdit() {},
-    handleDel() {},
+    handleEdit(row) {
+      this.action = "edit";
+      this.menuModel = true;
+      this.$nextTick(() => {
+        Object.assign(this.addmenuForm, row);
+      });
+    },
+    async handleDel(_id) {
+      await this.$api.menuSumbit({ _id, action: "delete" });
+      this.$message("删除成功！");
+      this.getMenuList();
+    },
     // 菜单关闭
     handleClose() {
       this.menuModel = false;
