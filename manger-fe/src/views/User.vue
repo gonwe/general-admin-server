@@ -136,6 +136,7 @@
 
 <script>
 import { getCurrentInstance, onMounted, reactive, ref, toRaw } from "vue";
+import utils from "../utils/utils";
 
 export default {
   name: "User",
@@ -220,10 +221,18 @@ export default {
       {
         label: "创建时间",
         prop: "createTime",
+        width: 180,
+        formatter: (row, colunm, value) => {
+          return utils.formatDate(new Date(value));
+        },
       },
       {
         label: "最后登录时间",
         prop: "lastLoginTime",
+        width: 180,
+        formatter: (row, colunm, value) => {
+          return utils.formatDate(new Date(value));
+        },
       },
     ]);
     //  初始化接口调用

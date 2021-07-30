@@ -43,7 +43,7 @@ router.post("/login", async (ctx) => {
 });
 
 // 用户列表
-router.get("list", async (ctx) => {
+router.get("/list", async (ctx) => {
   const { userId, userName, state } = ctx.request.query;
   const { page, skipIndex } = util.pager(ctx.request.query);
   let params = {};
@@ -67,7 +67,7 @@ router.get("list", async (ctx) => {
 });
 
 // 用户删除
-router.post("delete", (ctx) => {
+router.post("/delete", (ctx) => {
   // todo;
 });
 

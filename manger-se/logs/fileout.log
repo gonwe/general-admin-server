@@ -298,3 +298,25 @@
 [2021-07-26T22:04:05.084] [INFO] info - ***数据库连接成功***
 [2021-07-26T22:09:47.243] [INFO] info - ***数据库连接成功***
 [2021-07-26T22:19:33.804] [INFO] info - ***数据库连接成功***
+[2021-07-30T14:35:34.588] [INFO] info - ***数据库连接成功***
+[2021-07-30T14:36:12.080] [INFO] info - get params:{}
+[2021-07-30T14:36:12.081] [INFO] info - post params:{"userName":"admin","userPwd":123}
+[2021-07-30T14:36:35.264] [INFO] info - get params:{}
+[2021-07-30T14:36:35.265] [INFO] info - post params:{"userName":"admin","userPwd":123}
+[2021-07-30T14:36:47.170] [INFO] info - get params:{}
+[2021-07-30T14:36:47.171] [INFO] info - post params:{"userName":"admin","userPwd":123}
+[2021-07-30T14:37:17.850] [INFO] info - get params:{}
+[2021-07-30T14:37:17.850] [INFO] info - post params:{}
+[2021-07-30T14:37:43.375] [INFO] info - get params:{}
+[2021-07-30T14:37:43.376] [INFO] info - post params:{}
+[2021-07-30T14:38:07.045] [INFO] info - ***数据库连接成功***
+[2021-07-30T14:38:07.106] [INFO] info - get params:{}
+[2021-07-30T14:38:07.107] [INFO] info - post params:{}
+[2021-07-30T14:38:14.476] [INFO] info - get params:{}
+[2021-07-30T14:38:14.477] [INFO] info - post params:{}
+[2021-07-30T14:39:22.111] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"0"}
+[2021-07-30T14:39:22.112] [INFO] info - post params:{}
+[2021-07-30T14:40:50.782] [INFO] info - get params:{}
+[2021-07-30T14:40:50.782] [INFO] info - post params:{"userName":"admin","userPwd":123}
+[2021-07-30T14:40:56.981] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"0"}
+[2021-07-30T14:40:56.981] [INFO] info - post params:{}
