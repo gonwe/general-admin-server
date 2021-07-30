@@ -45,6 +45,7 @@
 </template>
 
 <script>
+import md5 from "md5";
 export default {
   name: "login",
   components: {},
@@ -62,7 +63,7 @@ export default {
       this.$refs.loginForm.validate((valid) => {
         if (valid) {
           this.$api
-            .login(this.loginForm)
+            .login({ ...this.loginForm, userPwd: md5(this.loginForm.userPwd) })
             .then((res) => {
               console.log(res);
               this.$store.commit("saveUserInfo", res);

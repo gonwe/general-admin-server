@@ -70,11 +70,21 @@ export default {
   data() {
     return {
       isCollapse: false,
-      userInfo: this.$store.state.userInfo,
+
       noticeCount: 0,
       userMenu: [],
       activeMenu: location.hash.slice(1),
     };
+  },
+  created() {
+    if (!this.$store.state.userInfo) {
+      this.$router.push("/login");
+    }
+  },
+  computed: {
+    userInfo() {
+      return this.$store.state.userInfo;
+    },
   },
   mounted() {
     this.getNoticesCount();

@@ -1,22 +1,20 @@
 Arguments: 
-  D:\Program Files\nodejs\node.exe D:\Program Files\nodejs\node_global\node_modules\yarn\bin\yarn.js
+  D:\Program Files\nodejs\node.exe D:\Program Files\nodejs\node_global\node_modules\yarn\bin\yarn.js add md5 -D
 
 PATH: 
-  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\Program Files\nodejs;D:\Program Files\Git\cmd;D:\Program Files\nodejs\node_global;C:\Users\Gonwe\AppData\Local\Microsoft\WindowsApps;D:\Program Files\Microsoft VS Code\bin;D:\Program Files\nodejs\node_global;
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\Program Files\nodejs;D:\Program Files\Git\cmd;D:\Program Files\nodejs\node_global;D:\Program Files\nodejs\;C:\Users\Gonwe\AppData\Local\Microsoft\WindowsApps;D:\Program Files\Microsoft VS Code\bin;D:\Program Files\nodejs\node_global;C:\Users\Gonwe\AppData\Roaming\npm
 
 Yarn version: 
   1.22.10
 
 Node version: 
-  12.19.0
+  14.17.3
 
 Platform: 
   win32 x64
 
 Trace: 
-  Error: write EPROTO 6668:error:14094438:SSL routines:ssl3_read_bytes:tlsv1 alert internal error:c:\ws\deps\openssl\openssl\ssl\record\rec_layer_s3.c:1544:SSL alert number 80
-  
-      at WriteWrap.onWriteComplete [as oncomplete] (internal/stream_base_commons.js:94:16)
+  Error: EPERM: operation not permitted, unlink 'D:\Koa\manger-fe\node_modules\vite\node_modules\esbuild\esbuild.exe'
 
 npm manifest: 
   {
@@ -630,3 +628,8 @@ Lockfile:
     version "3.1.1"
     resolved "https://registry.nlark.com/yallist/download/yallist-3.1.1.tgz#dbb7daf9bfd8bac9ab45ebf602b8cbad0d5d08fd"
     integrity sha1-27fa+b/YusmrRev2ArjLrQ1dCP0=
+  
+  yarn@^1.22.10:
+    version "1.22.10"
+    resolved "https://registry.npm.taobao.org/yarn/download/yarn-1.22.10.tgz#c99daa06257c80f8fa2c3f1490724e394c26b18c"
+    integrity sha1-yZ2qBiV8gPj6LD8UkHJOOUwmsYw=
