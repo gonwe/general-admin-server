@@ -1,0 +1,121 @@
+[2021-07-30T16:00:52.510] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:01:00.208] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"1","state":"0"}
+[2021-07-30T16:01:00.209] [INFO] info - post params:{}
+[2021-07-30T16:01:17.187] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"1","state":"0"}
+[2021-07-30T16:01:17.188] [INFO] info - post params:{}
+[2021-07-30T16:01:18.683] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"1","state":"0"}
+[2021-07-30T16:01:18.684] [INFO] info - post params:{}
+[2021-07-30T16:01:21.711] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"0"}
+[2021-07-30T16:01:21.712] [INFO] info - post params:{}
+[2021-07-30T16:01:48.500] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:01:59.580] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"1","state":"0"}
+[2021-07-30T16:01:59.582] [INFO] info - post params:{}
+[2021-07-30T16:02:01.243] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"1","state":"0"}
+[2021-07-30T16:02:01.244] [INFO] info - post params:{}
+[2021-07-30T16:02:13.667] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"0"}
+[2021-07-30T16:02:13.668] [INFO] info - post params:{}
+[2021-07-30T16:02:15.886] [INFO] info - get params:{}
+[2021-07-30T16:02:15.887] [INFO] info - post params:{"userIds":[1000002]}
+[2021-07-30T16:03:44.378] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:04:02.780] [INFO] info - get params:{}
+[2021-07-30T16:04:02.781] [INFO] info - post params:{"userIds":[1000002]}
+[2021-07-30T16:05:43.379] [INFO] info - get params:{}
+[2021-07-30T16:05:43.379] [INFO] info - post params:{"userIds":[1000002]}
+[2021-07-30T16:05:43.766] [INFO] info - get params:{}
+[2021-07-30T16:05:43.766] [INFO] info - post params:{"userIds":[1000002]}
+[2021-07-30T16:05:44.752] [INFO] info - get params:{}
+[2021-07-30T16:05:44.752] [INFO] info - post params:{"userIds":[1000002]}
+[2021-07-30T16:05:54.127] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"1","state":"0"}
+[2021-07-30T16:05:54.128] [INFO] info - post params:{}
+[2021-07-30T16:05:55.582] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"1","state":"0"}
+[2021-07-30T16:05:55.583] [INFO] info - post params:{}
+[2021-07-30T16:08:06.534] [INFO] info - get params:{}
+[2021-07-30T16:08:06.535] [INFO] info - post params:{"userIds":[1000002]}
+[2021-07-30T16:08:07.367] [INFO] info - get params:{}
+[2021-07-30T16:08:07.368] [INFO] info - post params:{"userIds":[1000002]}
+[2021-07-30T16:08:08.380] [INFO] info - get params:{}
+[2021-07-30T16:08:08.380] [INFO] info - post params:{"userIds":[1000002]}
+[2021-07-30T16:08:52.965] [INFO] info - get params:{}
+[2021-07-30T16:08:52.965] [INFO] info - post params:{"userIds":[1000002]}
+[2021-07-30T16:09:41.271] [INFO] info - get params:{}
+[2021-07-30T16:09:41.271] [INFO] info - post params:{"userIds":[1000002]}
+[2021-07-30T16:09:56.369] [INFO] info - get params:{}
+[2021-07-30T16:09:56.370] [INFO] info - post params:{"userIds":[1000002]}
+[2021-07-30T16:10:09.971] [INFO] info - get params:{}
+[2021-07-30T16:10:09.971] [INFO] info - post params:{"userIds":[1000002]}
+[2021-07-30T16:10:25.096] [INFO] info - get params:{}
+[2021-07-30T16:10:25.097] [INFO] info - post params:{"userIds":[1000002]}
+[2021-07-30T16:12:18.001] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:12:18.004] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"0"}
+[2021-07-30T16:12:18.005] [INFO] info - post params:{}
+[2021-07-30T16:12:27.305] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"0"}
+[2021-07-30T16:12:27.305] [INFO] info - post params:{}
+[2021-07-30T16:12:51.200] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"0"}
+[2021-07-30T16:12:51.201] [INFO] info - post params:{}
+[2021-07-30T16:12:52.510] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"0"}
+[2021-07-30T16:12:52.512] [INFO] info - post params:{}
+[2021-07-30T16:13:06.665] [INFO] info - get params:{}
+[2021-07-30T16:13:06.665] [INFO] info - post params:{"userIds":[1000002]}
+[2021-07-30T16:15:03.767] [INFO] info - get params:{}
+[2021-07-30T16:15:03.767] [INFO] info - post params:{"userIds":[1000002]}
+[2021-07-30T16:15:07.508] [INFO] info - get params:{}
+[2021-07-30T16:15:07.509] [INFO] info - post params:{"userIds":[1000002]}
+[2021-07-30T16:15:17.486] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:15:21.450] [INFO] info - get params:{}
+[2021-07-30T16:15:21.451] [INFO] info - post params:{"userIds":[1000002]}
+[2021-07-30T16:16:17.941] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"0"}
+[2021-07-30T16:16:17.942] [INFO] info - post params:{}
+[2021-07-30T16:16:52.243] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:17:20.191] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:17:20.192] [INFO] info - post params:{}
+[2021-07-30T16:17:24.444] [INFO] info - get params:{}
+[2021-07-30T16:17:24.445] [INFO] info - post params:{"userIds":[1000002]}
+[2021-07-30T16:17:29.263] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"0"}
+[2021-07-30T16:17:29.264] [INFO] info - post params:{}
+[2021-07-30T16:17:33.382] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:17:36.105] [INFO] info - get params:{}
+[2021-07-30T16:17:36.105] [INFO] info - post params:{"userIds":[1000002]}
+[2021-07-30T16:17:59.183] [INFO] info - get params:{}
+[2021-07-30T16:17:59.185] [INFO] info - post params:{"userIds":[1000002]}
+[2021-07-30T16:18:02.308] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"0"}
+[2021-07-30T16:18:02.308] [INFO] info - post params:{}
+[2021-07-30T16:18:03.951] [INFO] info - get params:{}
+[2021-07-30T16:18:03.951] [INFO] info - post params:{"userIds":[1000003]}
+[2021-07-30T16:18:08.707] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:18:12.093] [INFO] info - get params:{}
+[2021-07-30T16:18:12.094] [INFO] info - post params:{"userIds":[1000002]}
+[2021-07-30T16:18:42.701] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:18:43.234] [INFO] info - get params:{}
+[2021-07-30T16:18:43.235] [INFO] info - post params:{"userIds":[1000003]}
+[2021-07-30T16:19:25.704] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:19:29.400] [INFO] info - get params:{}
+[2021-07-30T16:19:29.400] [INFO] info - post params:{"userIds":[1000003]}
+[2021-07-30T16:20:17.210] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:20:24.460] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:20:24.461] [INFO] info - post params:{}
+[2021-07-30T16:20:26.380] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:20:26.381] [INFO] info - post params:{}
+[2021-07-30T16:20:48.280] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:20:50.538] [INFO] info - get params:{}
+[2021-07-30T16:20:50.539] [INFO] info - post params:{"userIds":[1000002]}
+[2021-07-30T16:21:10.854] [INFO] info - get params:{}
+[2021-07-30T16:21:10.855] [INFO] info - post params:{"userIds":[1000003]}
+[2021-07-30T16:21:13.027] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:21:13.028] [INFO] info - post params:{}
+[2021-07-30T16:21:14.398] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:21:14.399] [INFO] info - post params:{}
+[2021-07-30T16:21:46.220] [INFO] info - get params:{}
+[2021-07-30T16:21:46.220] [INFO] info - post params:{"userIds":[1000002]}
+[2021-07-30T16:21:52.011] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:21:52.012] [INFO] info - post params:{}
+[2021-07-30T16:21:56.196] [INFO] info - get params:{}
+[2021-07-30T16:21:56.196] [INFO] info - post params:{"userIds":[1000003]}
+[2021-07-30T16:21:58.113] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:21:58.114] [INFO] info - post params:{}
+[2021-07-30T16:22:20.521] [INFO] info - get params:{}
+[2021-07-30T16:22:20.521] [INFO] info - post params:{"userIds":[1000003]}
+[2021-07-30T16:23:26.632] [INFO] info - get params:{}
+[2021-07-30T16:23:26.632] [INFO] info - post params:{"userIds":[1000003]}
+[2021-07-30T16:23:26.639] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:23:32.910] [INFO] info - get params:{}
+[2021-07-30T16:23:32.911] [INFO] info - post params:{"userIds":[1000003]}

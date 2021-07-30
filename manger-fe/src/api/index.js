@@ -39,7 +39,7 @@ export default {
       url: "/users/list",
       method: "get",
       data: params,
-      mock: false,
+      // mock: false,
     });
   },
   userDel(params) {
@@ -48,7 +48,7 @@ export default {
       url: "/users/delete",
       method: "post",
       data: params,
-      mock: true,
+      // mock: true,
     });
   },
   getDeptList(params) {

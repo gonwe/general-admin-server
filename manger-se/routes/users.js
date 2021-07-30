@@ -67,8 +67,14 @@ router.get("/list", async (ctx) => {
 });
 
 // 用户删除
-router.post("/delete", (ctx) => {
-  // todo;
+router.post("/delete", async (ctx) => {
+  const { userIds } = ctx.request.body;
+  const res = await User.updateMany({ userId: { $in: userIds } }, { state: 2 });
+  if (res.nModified) {
+    ctx.body = util.success(res, `删除成功！共删除${nModified}条数据！`);
+    return;
+  }
+  ctx.body = util.fail("删除失败");
 });
 
 module.exports = router;
