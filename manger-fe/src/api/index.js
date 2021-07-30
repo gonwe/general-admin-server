@@ -78,4 +78,13 @@ export default {
       // mock: true,
     });
   },
+  menuSumbit(params) {
+    console.log(params);
+    return request({
+      url: "/menu/operate",
+      method: "post",
+      data: params,
+      mock: true,
+    });
+  },
 };

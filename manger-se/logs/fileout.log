@@ -590,3 +590,8 @@
 [2021-07-30T21:49:28.508] [INFO] info - post params:{}
 [2021-07-30T21:49:35.463] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"1"}
 [2021-07-30T21:49:35.463] [INFO] info - post params:{}
+[2021-07-30T22:21:28.509] [INFO] info - ***数据库连接成功***
+[2021-07-30T22:35:50.589] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"1"}
+[2021-07-30T22:35:50.591] [INFO] info - post params:{}
+[2021-07-30T22:51:43.264] [INFO] info - ***数据库连接成功***
+[2021-07-30T23:11:07.693] [INFO] info - ***数据库连接成功***
