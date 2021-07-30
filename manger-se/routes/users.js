@@ -77,4 +77,26 @@ router.post("/delete", async (ctx) => {
   ctx.body = util.fail("删除失败");
 });
 
+// 用户新增/编辑
+router.post("/operate", async (ctx) => {
+  const { userId,userName, userEmail, mobile, job, state, roleList, deptId, action } =
+    ctx.request.body;
+  if (action == "add") {
+    if (!userName || !userEmail || !deptId) {
+      ctx.body = util.fail(util.CODE.PARPM_ERROR);
+      return;
+    }
+    if (!deptId) {
+      ctx.body = util.fail("部门不能为空");
+      return;
+    }
+  }
+  try {
+   await User.findOneAndUpdate({userId}, { mobile, job, state, roleList, deptId});
+    ctx.body = util.success({},"更新成功！")
+  } catch (error) {
+    ctx.body = util.fail(`${error.stack} 更新失败！`)
+  }
+});
+
 module.exports = router;

@@ -370,3 +370,49 @@
 [2021-07-30T15:55:00.559] [INFO] info - ***数据库连接成功***
 [2021-07-30T15:55:09.671] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"1","state":"0"}
 [2021-07-30T15:55:09.672] [INFO] info - post params:{}
+[2021-07-30T16:27:01.548] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:29:07.525] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:30:52.544] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:31:38.962] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:40:32.759] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:43:20.973] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:43:59.563] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:44:50.127] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:44:56.380] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"0"}
+[2021-07-30T16:44:56.381] [INFO] info - post params:{}
+[2021-07-30T16:45:00.954] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:45:00.955] [INFO] info - post params:{}
+[2021-07-30T16:45:05.202] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:45:05.202] [INFO] info - post params:{}
+[2021-07-30T16:45:26.501] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"0"}
+[2021-07-30T16:45:26.502] [INFO] info - post params:{}
+[2021-07-30T16:45:32.563] [INFO] info - get params:{}
+[2021-07-30T16:45:32.563] [INFO] info - post params:{"state":1,"roleList":["60180b07b1eaed6c45fbebdb","60150cb764de99631b2c3cd3","60180b59b1eaed6c45fbebdc"],"deptId":["60167059c9027b7d2c520a61","60167345c6a4417f2d27506f"],"role":0,"createTime":"2021-01-17T13:32:06.381Z","lastLoginTime":"2021-01-17T13:32:06.381Z","userId":1000002,"userName":"admin","userEmail":"admin@imooc.com@gonwe.com","__v":0,"job":"前端架构师","mobile":17611020000,"action":{"_rawValue":"edit","_shallow":false,"__v_isRef":true,"_value":"edit"}}
+[2021-07-30T16:46:19.411] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:46:32.026] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:46:32.239] [INFO] info - get params:{}
+[2021-07-30T16:46:32.239] [INFO] info - post params:{"state":1,"roleList":["60180b07b1eaed6c45fbebdb","60150cb764de99631b2c3cd3","60180b59b1eaed6c45fbebdc"],"deptId":["60167059c9027b7d2c520a61","60167345c6a4417f2d27506f"],"role":0,"createTime":"2021-01-17T13:32:06.381Z","lastLoginTime":"2021-01-17T13:32:06.381Z","userId":1000002,"userName":"admin","userEmail":"admin@imooc.com@gonwe.com@gonwe.com","__v":0,"job":"前端架构师","mobile":17611020000,"action":{"_rawValue":"edit","_shallow":false,"__v_isRef":true,"_value":"edit"}}
+[2021-07-30T16:46:32.594] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:46:32.594] [INFO] info - post params:{}
+[2021-07-30T16:46:43.339] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"0"}
+[2021-07-30T16:46:43.340] [INFO] info - post params:{}
+[2021-07-30T16:46:59.234] [INFO] info - get params:{}
+[2021-07-30T16:46:59.234] [INFO] info - post params:{"state":1,"roleList":["60180b07b1eaed6c45fbebdb","60150cb764de99631b2c3cd3","60180b59b1eaed6c45fbebdc"],"deptId":["60167059c9027b7d2c520a61","60167345c6a4417f2d27506f"],"role":0,"createTime":"2021-01-17T13:32:06.381Z","lastLoginTime":"2021-01-17T13:32:06.381Z","userId":1000003,"userName":"admin3","userEmail":"admin@imooc.com@gonwe.com","__v":0,"job":"前端架构师","mobile":"17611020004","action":{"_rawValue":"edit","_shallow":false,"__v_isRef":true,"_value":"edit"}}
+[2021-07-30T16:46:59.263] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:46:59.263] [INFO] info - post params:{}
+[2021-07-30T16:47:02.381] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:47:02.381] [INFO] info - post params:{}
+[2021-07-30T16:47:03.493] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:47:03.493] [INFO] info - post params:{}
+[2021-07-30T16:47:09.873] [INFO] info - get params:{}
+[2021-07-30T16:47:09.873] [INFO] info - post params:{"state":1,"roleList":["60180b07b1eaed6c45fbebdb","60150cb764de99631b2c3cd3","60180b59b1eaed6c45fbebdc"],"deptId":["60167059c9027b7d2c520a61","60167345c6a4417f2d27506f"],"role":0,"createTime":"2021-01-17T13:32:06.381Z","lastLoginTime":"2021-01-17T13:32:06.381Z","userId":1000003,"userName":"admin3","userEmail":"admin@imooc.com@gonwe.com","__v":0,"job":"前端架构师","mobile":17611020000,"action":{"_rawValue":"edit","_shallow":false,"__v_isRef":true,"_value":"edit"}}
+[2021-07-30T16:47:10.211] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:47:10.211] [INFO] info - post params:{}
+[2021-07-30T16:47:46.325] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:47:46.325] [INFO] info - post params:{}
+[2021-07-30T16:47:48.275] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:47:48.275] [INFO] info - post params:{}
+[2021-07-30T16:48:01.654] [INFO] info - get params:{}
+[2021-07-30T16:48:01.655] [INFO] info - post params:{"state":1,"roleList":["60180b07b1eaed6c45fbebdb","60150cb764de99631b2c3cd3","60180b59b1eaed6c45fbebdc"],"deptId":["60167059c9027b7d2c520a61","60167375c6a4417f2d275072"],"role":0,"createTime":"2021-01-17T13:32:06.381Z","lastLoginTime":"2021-01-17T13:32:06.381Z","userId":1000003,"userName":"admin3","userEmail":"admin@imooc.com@gonwe.com","__v":0,"job":"前端架构师","mobile":17611020000,"action":{"_rawValue":"edit","_shallow":false,"__v_isRef":true,"_value":"edit"}}
+[2021-07-30T16:48:01.920] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:48:01.920] [INFO] info - post params:{}

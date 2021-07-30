@@ -119,3 +119,22 @@
 [2021-07-30T16:23:26.639] [INFO] info - ***数据库连接成功***
 [2021-07-30T16:23:32.910] [INFO] info - get params:{}
 [2021-07-30T16:23:32.911] [INFO] info - post params:{"userIds":[1000003]}
+[2021-07-30T16:23:40.580] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:24:09.474] [INFO] info - get params:{}
+[2021-07-30T16:24:09.476] [INFO] info - post params:{"userIds":[1000003]}
+[2021-07-30T16:24:30.859] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:24:30.860] [INFO] info - post params:{}
+[2021-07-30T16:24:31.678] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:24:31.679] [INFO] info - post params:{}
+[2021-07-30T16:24:31.943] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:24:31.944] [INFO] info - post params:{}
+[2021-07-30T16:24:32.937] [INFO] info - get params:{}
+[2021-07-30T16:24:32.938] [INFO] info - post params:{"userIds":[1000002]}
+[2021-07-30T16:24:42.739] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:24:42.740] [INFO] info - post params:{}
+[2021-07-30T16:26:09.140] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"0"}
+[2021-07-30T16:26:09.140] [INFO] info - post params:{}
+[2021-07-30T16:26:12.122] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"1"}
+[2021-07-30T16:26:12.123] [INFO] info - post params:{}
+[2021-07-30T16:26:14.195] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"0","state":"0"}
+[2021-07-30T16:26:14.195] [INFO] info - post params:{}

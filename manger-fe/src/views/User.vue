@@ -333,7 +333,7 @@ export default {
           let res = await that.$api.userSumbit(params);
           if (res) {
             userModel.value = false;
-            that.$message.success("用户创建成功！");
+            that.$message.success(res.msg || "操作成功！");
             handleReset("userFormAdd");
             getUserList();
           }
