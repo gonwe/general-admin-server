@@ -146,7 +146,7 @@ export default {
     const that = appContext.config.globalProperties;
     // 初始化用户数据
     const user = reactive({
-      state: 0,
+      state: 1,
     });
     // 初始分页对象
     const pager = reactive({
@@ -329,7 +329,7 @@ export default {
         if (valid) {
           let params = toRaw(addUserForm); //toRaw相当于深拷贝 不影响原始数据
           params.userEmail += "@gonwe.com";
-          params.action = action;
+          params.action = action.value;
           let res = await that.$api.userSumbit(params);
           if (res) {
             userModel.value = false;

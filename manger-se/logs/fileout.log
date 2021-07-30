@@ -416,3 +416,153 @@
 [2021-07-30T16:48:01.655] [INFO] info - post params:{"state":1,"roleList":["60180b07b1eaed6c45fbebdb","60150cb764de99631b2c3cd3","60180b59b1eaed6c45fbebdc"],"deptId":["60167059c9027b7d2c520a61","60167375c6a4417f2d275072"],"role":0,"createTime":"2021-01-17T13:32:06.381Z","lastLoginTime":"2021-01-17T13:32:06.381Z","userId":1000003,"userName":"admin3","userEmail":"admin@imooc.com@gonwe.com","__v":0,"job":"前端架构师","mobile":17611020000,"action":{"_rawValue":"edit","_shallow":false,"__v_isRef":true,"_value":"edit"}}
 [2021-07-30T16:48:01.920] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
 [2021-07-30T16:48:01.920] [INFO] info - post params:{}
+[2021-07-30T16:49:00.198] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:49:05.418] [INFO] info - get params:{}
+[2021-07-30T16:49:05.418] [INFO] info - post params:{"state":1,"roleList":["60180b07b1eaed6c45fbebdb","60150cb764de99631b2c3cd3","60180b59b1eaed6c45fbebdc"],"deptId":["60167059c9027b7d2c520a61","60167345c6a4417f2d27506f"],"role":0,"createTime":"2021-01-17T13:32:06.381Z","lastLoginTime":"2021-01-17T13:32:06.381Z","userId":1000003,"userName":"admin3","userEmail":"admin@imooc.com@gonwe.com","__v":0,"job":"前端架构师","mobile":17611020000,"action":{"_rawValue":"edit","_shallow":false,"__v_isRef":true,"_value":"edit"}}
+[2021-07-30T16:49:05.656] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:49:05.656] [INFO] info - post params:{}
+[2021-07-30T16:49:12.587] [INFO] info - get params:{}
+[2021-07-30T16:49:12.588] [INFO] info - post params:{"state":1,"roleList":["60180b07b1eaed6c45fbebdb","60150cb764de99631b2c3cd3","60180b59b1eaed6c45fbebdc"],"deptId":["60167059c9027b7d2c520a61","60167375c6a4417f2d275072"],"role":0,"createTime":"2021-01-17T13:32:06.381Z","lastLoginTime":"2021-01-17T13:32:06.381Z","userId":1000003,"userName":"admin3","userEmail":"admin@imooc.com@gonwe.com","__v":0,"job":"前端架构师","mobile":17611020000,"action":{"_rawValue":"edit","_shallow":false,"__v_isRef":true,"_value":"edit"}}
+[2021-07-30T16:49:12.916] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:49:12.917] [INFO] info - post params:{}
+[2021-07-30T16:49:49.869] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"0"}
+[2021-07-30T16:49:49.870] [INFO] info - post params:{}
+[2021-07-30T16:49:58.815] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"0"}
+[2021-07-30T16:49:58.816] [INFO] info - post params:{}
+[2021-07-30T16:50:07.114] [INFO] info - get params:{}
+[2021-07-30T16:50:07.115] [INFO] info - post params:{"state":1,"roleList":["60180b07b1eaed6c45fbebdb","60150cb764de99631b2c3cd3","60180b59b1eaed6c45fbebdc"],"deptId":["60167059c9027b7d2c520a61","60167375c6a4417f2d275072"],"role":0,"createTime":"2021-01-17T13:32:06.381Z","lastLoginTime":"2021-01-17T13:32:06.381Z","userId":1000003,"userName":"admin3","userEmail":"admin@imooc.com@gonwe.com","__v":0,"job":"前端架构师","mobile":17611020000,"action":{"_rawValue":"edit","_shallow":false,"__v_isRef":true,"_value":"edit"}}
+[2021-07-30T16:50:07.437] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:50:07.438] [INFO] info - post params:{}
+[2021-07-30T16:50:10.437] [INFO] info - get params:{}
+[2021-07-30T16:50:10.438] [INFO] info - post params:{"state":1,"roleList":["60180b07b1eaed6c45fbebdb","60150cb764de99631b2c3cd3","60180b59b1eaed6c45fbebdc"],"deptId":["60167059c9027b7d2c520a61","60167375c6a4417f2d275072"],"role":0,"createTime":"2021-01-17T13:32:06.381Z","lastLoginTime":"2021-01-17T13:32:06.381Z","userId":1000002,"userName":"admin","userEmail":"admin@imooc.com@gonwe.com","__v":0,"job":"前端架构师","mobile":17611020000,"action":{"_rawValue":"edit","_shallow":false,"__v_isRef":true,"_value":"edit"}}
+[2021-07-30T16:50:10.769] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T16:50:10.770] [INFO] info - post params:{}
+[2021-07-30T16:50:43.694] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"0"}
+[2021-07-30T16:50:43.695] [INFO] info - post params:{}
+[2021-07-30T16:52:54.837] [INFO] info - ***数据库连接成功***
+[2021-07-30T16:57:27.191] [INFO] info - ***数据库连接成功***
+[2021-07-30T17:06:30.681] [INFO] info - ***数据库连接成功***
+[2021-07-30T17:06:49.415] [INFO] info - ***数据库连接成功***
+[2021-07-30T17:09:06.074] [INFO] info - ***数据库连接成功***
+[2021-07-30T17:11:51.767] [INFO] info - ***数据库连接成功***
+[2021-07-30T17:13:56.205] [INFO] info - ***数据库连接成功***
+[2021-07-30T17:13:57.520] [INFO] info - ***数据库连接成功***
+[2021-07-30T17:14:21.309] [INFO] info - get params:{}
+[2021-07-30T17:14:21.310] [INFO] info - post params:{"state":3,"roleList":["60150cb764de99631b2c3cd3"],"userName":"1","userEmail":"11@gonwe.com","mobile":"18198320642","job":"11","deptId":["60167059c9027b7d2c520a61","60167345c6a4417f2d27506f"],"action":{"_rawValue":"add","_shallow":false,"__v_isRef":true,"_value":"add"}}
+[2021-07-30T17:14:32.081] [INFO] info - get params:{}
+[2021-07-30T17:14:32.081] [INFO] info - post params:{"userName":"admin","userPwd":123}
+[2021-07-30T17:14:48.974] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"0"}
+[2021-07-30T17:14:48.974] [INFO] info - post params:{}
+[2021-07-30T17:15:17.960] [INFO] info - get params:{}
+[2021-07-30T17:15:17.961] [INFO] info - post params:{"state":3,"roleList":[],"userName":"1","userEmail":"1@gonwe.com","deptId":["60167059c9027b7d2c520a61","60167345c6a4417f2d27506f"],"action":{"_rawValue":"add","_shallow":false,"__v_isRef":true,"_value":"add"}}
+[2021-07-30T17:15:18.198] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T17:15:18.198] [INFO] info - post params:{}
+[2021-07-30T17:17:35.962] [INFO] info - ***数据库连接成功***
+[2021-07-30T17:17:45.951] [INFO] info - get params:{}
+[2021-07-30T17:17:45.952] [INFO] info - post params:{"state":3,"roleList":[],"userName":"11","userEmail":"11@gonwe.com","deptId":["60167059c9027b7d2c520a61","60167345c6a4417f2d27506f"],"action":{"_rawValue":"add","_shallow":false,"__v_isRef":true,"_value":"add"}}
+[2021-07-30T17:17:46.208] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T17:17:46.208] [INFO] info - post params:{}
+[2021-07-30T17:19:09.286] [INFO] info - ***数据库连接成功***
+[2021-07-30T17:19:54.047] [INFO] info - ***数据库连接成功***
+[2021-07-30T17:20:02.176] [INFO] info - get params:{}
+[2021-07-30T17:20:02.176] [INFO] info - post params:{"state":3,"roleList":[],"userName":"11","userEmail":"11@gonwe.com","deptId":["60167059c9027b7d2c520a61","6016728fc6a4417f2d27506e"],"action":{"_rawValue":"add","_shallow":false,"__v_isRef":true,"_value":"add"}}
+[2021-07-30T17:20:02.421] [INFO] info - get params:{}
+[2021-07-30T17:20:02.421] [INFO] info - post params:{"state":3,"roleList":[],"userName":"11","userEmail":"11@gonwe.com@gonwe.com","deptId":["60167059c9027b7d2c520a61","6016728fc6a4417f2d27506e"],"action":{"_rawValue":"add","_shallow":false,"__v_isRef":true,"_value":"add"}}
+[2021-07-30T17:20:02.430] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T17:20:02.430] [INFO] info - post params:{}
+[2021-07-30T17:20:02.516] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T17:20:02.516] [INFO] info - post params:{}
+[2021-07-30T17:22:03.708] [INFO] info - ***数据库连接成功***
+[2021-07-30T17:23:30.215] [INFO] info - get params:{}
+[2021-07-30T17:23:30.215] [INFO] info - post params:{"state":3,"roleList":[],"userName":"11","userEmail":"11@gonwe.com","deptId":["60167059c9027b7d2c520a61","6016728fc6a4417f2d27506e","60167621531124822b79e124"],"action":{"_rawValue":"add","_shallow":false,"__v_isRef":true,"_value":"add"}}
+[2021-07-30T17:27:31.425] [INFO] info - ***数据库连接成功***
+[2021-07-30T17:33:35.682] [INFO] info - ***数据库连接成功***
+[2021-07-30T17:35:36.096] [INFO] info - ***数据库连接成功***
+[2021-07-30T17:36:12.846] [INFO] info - ***数据库连接成功***
+[2021-07-30T17:37:28.018] [INFO] info - ***数据库连接成功***
+[2021-07-30T17:37:57.704] [INFO] info - ***数据库连接成功***
+[2021-07-30T17:38:45.346] [INFO] info - ***数据库连接成功***
+[2021-07-30T17:40:21.901] [INFO] info - ***数据库连接成功***
+[2021-07-30T17:41:16.703] [INFO] info - ***数据库连接成功***
+[2021-07-30T17:42:43.974] [INFO] info - ***数据库连接成功***
+[2021-07-30T17:42:51.508] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"0"}
+[2021-07-30T17:42:51.508] [INFO] info - post params:{}
+[2021-07-30T17:43:02.772] [INFO] info - get params:{}
+[2021-07-30T17:43:02.773] [INFO] info - post params:{"state":3,"roleList":[],"userName":"11","userEmail":"11@gonwe.com","deptId":["60167059c9027b7d2c520a61","60167345c6a4417f2d27506f"],"action":"add"}
+[2021-07-30T17:43:02.831] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T17:43:02.831] [INFO] info - post params:{}
+[2021-07-30T17:43:09.994] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T17:43:09.994] [INFO] info - post params:{}
+[2021-07-30T17:43:11.071] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T17:43:11.071] [INFO] info - post params:{}
+[2021-07-30T17:43:11.859] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T17:43:11.859] [INFO] info - post params:{}
+[2021-07-30T17:43:12.123] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T17:43:12.123] [INFO] info - post params:{}
+[2021-07-30T17:44:47.718] [INFO] info - get params:{}
+[2021-07-30T17:44:47.719] [INFO] info - post params:{"state":1,"roleList":["60180b5eb1eaed6c45fbebdd"],"userName":"admin","userEmail":"admin@gonwe.com","deptId":["60167059c9027b7d2c520a61","6016735ac6a4417f2d275071"],"action":"add"}
+[2021-07-30T17:49:38.223] [INFO] info - ***数据库连接成功***
+[2021-07-30T17:49:58.043] [INFO] info - get params:{}
+[2021-07-30T17:49:58.043] [INFO] info - post params:{"state":1,"roleList":["60180b5eb1eaed6c45fbebdd"],"userName":"admin112","userEmail":"admin@gonwe.com","deptId":["60167059c9027b7d2c520a61","6016735ac6a4417f2d275071"],"action":"add"}
+[2021-07-30T17:49:58.301] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T17:49:58.302] [INFO] info - post params:{}
+[2021-07-30T17:50:45.736] [INFO] info - get params:{}
+[2021-07-30T17:50:45.737] [INFO] info - post params:{"state":3,"roleList":[],"userName":"111","userEmail":"1111@gonwe.com","deptId":["60167059c9027b7d2c520a61"],"action":"add"}
+[2021-07-30T17:50:46.072] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T17:50:46.072] [INFO] info - post params:{}
+[2021-07-30T17:50:47.430] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T17:50:47.430] [INFO] info - post params:{}
+[2021-07-30T17:50:49.170] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T17:50:49.170] [INFO] info - post params:{}
+[2021-07-30T17:50:57.716] [INFO] info - get params:{}
+[2021-07-30T17:50:57.716] [INFO] info - post params:{"state":3,"roleList":[],"userName":"11","userEmail":"111@gonwe.com","deptId":["60167059c9027b7d2c520a61"],"action":"add"}
+[2021-07-30T17:50:58.055] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T17:50:58.055] [INFO] info - post params:{}
+[2021-07-30T17:50:59.155] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T17:50:59.155] [INFO] info - post params:{}
+[2021-07-30T17:50:59.959] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T17:50:59.960] [INFO] info - post params:{}
+[2021-07-30T17:51:05.520] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"0"}
+[2021-07-30T17:51:05.520] [INFO] info - post params:{}
+[2021-07-30T18:27:28.572] [INFO] info - ***数据库连接成功***
+[2021-07-30T18:28:02.601] [INFO] info - get params:{}
+[2021-07-30T18:28:02.602] [INFO] info - post params:{"state":3,"roleList":["60180b07b1eaed6c45fbebdb"],"userName":"user","userEmail":"user@gonwe.com","deptId":["60167059c9027b7d2c520a61","60167345c6a4417f2d27506f"],"action":"add","mobile":"18198320843","job":"前端工程师"}
+[2021-07-30T18:28:02.863] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"2","state":"0"}
+[2021-07-30T18:28:02.863] [INFO] info - post params:{}
+[2021-07-30T18:29:34.511] [INFO] info - get params:{}
+[2021-07-30T18:29:34.512] [INFO] info - post params:{"action":"add","deptId":["60167059c9027b7d2c520a61","60167345c6a4417f2d27506f"],"job":"前端工程师","mobile":"18198320843","roleList":["60180b07b1eaed6c45fbebdb"],"state":3,"userEmail":"user@gonwe.com","userName":"user"}
+[2021-07-30T18:29:41.029] [INFO] info - get params:{}
+[2021-07-30T18:29:41.029] [INFO] info - post params:{"userName":"admin","userPwd":123}
+[2021-07-30T18:30:00.021] [INFO] info - get params:{}
+[2021-07-30T18:30:00.021] [INFO] info - post params:{"action":"add","deptId":["60167059c9027b7d2c520a61","60167345c6a4417f2d27506f"],"job":"前端工程师","mobile":"18198320843","roleList":["60180b07b1eaed6c45fbebdb"],"state":3,"userEmail":"user@gonwe.com","userName":"user"}
+[2021-07-30T18:30:23.128] [INFO] info - get params:{}
+[2021-07-30T18:30:23.129] [INFO] info - post params:{"action":"add","deptId":["60167059c9027b7d2c520a61","60167345c6a4417f2d27506f"],"job":"前端工程师","mobile":"18198320843","roleList":["60180b07b1eaed6c45fbebdb"],"state":3,"userEmail":"user@gonwe.com","userName":"user"}
+[2021-07-30T18:30:58.910] [INFO] info - ***数据库连接成功***
+[2021-07-30T18:31:01.843] [INFO] info - get params:{}
+[2021-07-30T18:31:01.843] [INFO] info - post params:{"action":"add","deptId":["60167059c9027b7d2c520a61","60167345c6a4417f2d27506f"],"job":"前端工程师","mobile":"18198320843","roleList":["60180b07b1eaed6c45fbebdb"],"state":3,"userEmail":"user@gonwe.com","userName":"user"}
+[2021-07-30T18:35:39.490] [INFO] info - ***数据库连接成功***
+[2021-07-30T18:35:46.305] [INFO] info - ***数据库连接成功***
+[2021-07-30T18:36:33.795] [INFO] info - get params:{}
+[2021-07-30T18:36:33.796] [INFO] info - post params:{"userIds":[1000003]}
+[2021-07-30T18:36:40.985] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"0"}
+[2021-07-30T18:36:40.986] [INFO] info - post params:{}
+[2021-07-30T18:36:43.939] [INFO] info - get params:{}
+[2021-07-30T18:36:43.939] [INFO] info - post params:{"userIds":[1000003]}
+[2021-07-30T18:38:25.892] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"1"}
+[2021-07-30T18:38:25.893] [INFO] info - post params:{}
+[2021-07-30T18:38:30.955] [INFO] info - get params:{"pageNum":"1","pageSize":"10","state":"1"}
+[2021-07-30T18:38:30.956] [INFO] info - post params:{}
+[2021-07-30T18:38:34.261] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"0","state":"0"}
+[2021-07-30T18:38:34.261] [INFO] info - post params:{}
+[2021-07-30T18:38:38.522] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"4","state":"1"}
+[2021-07-30T18:38:38.523] [INFO] info - post params:{}
+[2021-07-30T18:38:56.836] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"0","state":"0"}
+[2021-07-30T18:38:56.836] [INFO] info - post params:{}
+[2021-07-30T18:39:00.624] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"4","state":"1"}
+[2021-07-30T18:39:00.624] [INFO] info - post params:{}
+[2021-07-30T18:39:36.135] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"0","state":"2"}
+[2021-07-30T18:39:36.135] [INFO] info - post params:{}
+[2021-07-30T18:39:41.136] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"0","state":"3"}
+[2021-07-30T18:39:41.136] [INFO] info - post params:{}
+[2021-07-30T18:39:43.506] [INFO] info - get params:{"pageNum":"1","pageSize":"10","total":"0","state":"1"}
+[2021-07-30T18:39:43.507] [INFO] info - post params:{}
