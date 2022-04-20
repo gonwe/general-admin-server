@@ -1,7 +1,0 @@
-[2021-07-30T18:35:20.853] [ERROR] error - ReferenceError: nModified is not defined
-    at d:\Koa\manger-se\routes\users.js:76:45
-    at processTicksAndRejections (internal/process/task_queues.js:95:5)
-    at async d:\Koa\manger-se\app.js:41:3
-    at async serve (d:\Koa\manger-se\node_modules\koa-static\index.js:53:9)
-    at async logger (d:\Koa\manger-se\node_modules\koa-logger\index.js:67:7)
-    at async bodyParser (d:\Koa\manger-se\node_modules\koa-bodyparser\index.js:95:5)

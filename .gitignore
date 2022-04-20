@@ -1,2 +1,6 @@
-manger-se/logs/fileout.log
-manger-se/logs/fileout.log
+node_modules
+.DS_Store
+dist
+logs
+dist-ssr
+*.local
