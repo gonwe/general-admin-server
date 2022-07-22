@@ -6,11 +6,13 @@ const onerror = require("koa-onerror");
 const logger = require("koa-logger");
 const log4js = require("./utils/log4j");
 const users = require("./routes/users");
+const menu = require("./routes/menu");
 const router = require("koa-router")();
 const bodyparser = require("koa-bodyparser");
 const jwt = require("jsonwebtoken")
 const koajwt = require("koa-jwt");
 const util = require("./utils/util");
+
 // error handler
 onerror(app);
 
@@ -61,6 +63,9 @@ router.prefix("/api");
 //   ctx.body="nody"
 // })
 router.use(users.routes(), users.allowedMethods());
+router.use(menu.routes(), menu.allowedMethods());
+
+
 app.use(router.routes(), users.allowedMethods());
 
 

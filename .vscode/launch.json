@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Koa2调试",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\manger-se\\bin\\www"
+      "program": "${workspaceFolder}\\bin\\www"
     }
   ]
 }
