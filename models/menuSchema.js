@@ -20,8 +20,7 @@ const menuSchema = mongoose.Schema({
     menuState: Number,
     /** 父级菜单 */
     parentId: {
-        type:[mongoose.SchemaTypes.ObjectId],
-        required: false
+        type:[mongoose.SchemaTypes.ObjectId]
     },
     /** 菜单排序 */
     order: Number,

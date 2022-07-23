@@ -1,15 +1,14 @@
 const router = require("koa-router")();
-const Menu = require("../models/menuSchema");
+const Role = require("../models/roleSchema");
 const util = require("../utils/util");
 
-router.prefix("/menu");
+router.prefix("/role");
 
 router.get("/list", async (ctx, next) => {
-    const { menuName, menuState } = ctx.request.query;
+    const { roleName} = ctx.request.query;
     let params = {};
-    if (menuName) params.menuName = menuName;
-    if (menuState) params.menuState = Number(menuState);
-    const orgList = await Menu.find(params) || [];
+    if (roleName) params.roleName = roleName;
+    const orgList = await Role.find(params) || [];
     const list = getTree(orgList, null, []);
     ctx.body = util.success(list, '菜单列表查询成功');
 })
@@ -26,7 +25,7 @@ function getTree(orgList, id, list) {
         getTree(orgList, item._id, item.children);
         if (item.children.length == 0) {
             delete item.children;
-        } else if (item.children.length > 0 && item.children[0].menuType == 2) {
+        } else if (item.children.length > 0 && item.children[0].roleType == 2) {
             item.action = item.children;
         }
     });
@@ -39,16 +38,14 @@ router.post("/operate", async (ctx) => {
     let res, info;
     try {
         if (action == "create") {
-            // res = await Menu.create(params);
-            const menu = new Menu(params);
-            res = await menu.save();
+            res = await Role.create(params);
             info = "新增成功！";
         } else if (action == "edit") {
-            res = await Menu.findByIdAndUpdate(_id, params);
+            res = await Role.findByIdAndUpdate(_id, params);
             info = "编辑成功！";
         } else if (action == "delete") {
-            res = await Menu.findByIdAndRemove(_id, params);
-            await Menu.deleteMany({ parentId: { $all: _id } });
+            res = await Role.findByIdAndRemove(_id, params);
+            await Role.deleteMany({ parentId: { $all: _id } });
             info = "删除成功！";
         }
         ctx.body = util.success(res, info);
