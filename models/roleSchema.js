@@ -9,7 +9,7 @@ const roleSchema = mongoose.Schema({
     /** 备注 */
     remark: String,
     /** 权限列表 */
-    permissionList: [],
+    permissionList: Object,
     /** 创建时间 */
     createTime: {
         type: Date,

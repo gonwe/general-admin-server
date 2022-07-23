@@ -5,33 +5,26 @@ const util = require("../utils/util");
 router.prefix("/role");
 
 router.get("/list", async (ctx, next) => {
-    const { roleName} = ctx.request.query;
+    const { roleName } = ctx.request.query;
+    const { page, skipIndex } = util.pager(ctx.request.query);
     let params = {};
     if (roleName) params.roleName = roleName;
-    const orgList = await Role.find(params) || [];
-    const list = getTree(orgList, null, []);
-    ctx.body = util.success(list, '菜单列表查询成功');
+    try {
+        const query = Role.find(params);
+        const list = await query.skip(skipIndex).limit(page.pageSize);
+        const total = await Role.countDocuments(params);
+        ctx.body = util.success({
+            page: {
+                ...page,
+                total,
+            },
+            list,
+        });
+    } catch (error) {
+        ctx.body = util.fail(`查询异常：${error.stack}`);
+    }
 })
 
-//递归查询所有的子菜单
-function getTree(orgList, id, list) {
-    orgList.forEach(item => {
-        if (item.parentId.slice().pop() == id || String(item.parentId.slice().pop()) === String(id)) {
-            list.push(item._doc);
-        }
-    })
-    list.map(item => {
-        item.children = [];
-        getTree(orgList, item._id, item.children);
-        if (item.children.length == 0) {
-            delete item.children;
-        } else if (item.children.length > 0 && item.children[0].roleType == 2) {
-            item.action = item.children;
-        }
-    });
-
-    return list;
-}
 
 router.post("/operate", async (ctx) => {
     const { _id, action, ...params } = ctx.request.body;
@@ -55,4 +48,13 @@ router.post("/operate", async (ctx) => {
     }
 });
 
+router.post("/update/permission", async (ctx) => {
+    const { _id, permissionList } = ctx.request.body;
+    try {
+        const res = await Role.findByIdAndUpdate(_id, { permissionList });
+        ctx.body = util.success(res, "更新成功！");
+    } catch (error) {
+        ctx.body = util.error(null, `更新异常：${error.stack}`);
+    }
+})
 module.exports = router;
