@@ -4,11 +4,12 @@
 const router = require("koa-router")();
 const User = require("./../models/userSchema");
 const Counter = require("./../models/counterSchema");
+const Menu = require("./../models/menuSchema");
+const Role = require("./../models/roleSchema");
 const util = require("./../utils/util");
-const log4js = require("./../utils/log4j");
-const json = require("koa-json");
 const jwt = require("jsonwebtoken");
 const md5 = require("md5");
+const { decoded } = require("./../utils/util");
 router.prefix("/users");
 
 router.post("/login", async (ctx) => {
@@ -164,5 +165,42 @@ router.post("/operate", async (ctx) => {
         }
     }
 });
+
+
+// 获取权限列表
+router.get("/getPermissions", async (ctx) => {
+    // 解析token的信息
+    const { authorization } = ctx.request.header;
+    const { data: userInfo } = decoded(authorization, "gonwe");
+    // 通过token获取的用户ID和角色列表
+    const menuList = await getTree(userInfo.role, userInfo.roleList);
+    ctx.body = util.success(menuList, "获取权限列表成功！");
+
+
+    /**
+     * 通过角色列表获取菜单列表
+     * @param {Number} role 角色
+     * @param {Array} roleList 角色列表
+     * @return {Array} 菜单列表 
+     * */
+    async function getTree(userRole, roleList) {
+        let rawList = [];
+        //判断是否有管理员，是则返回所有菜单
+        if (userRole == 0) {
+            rawList = await Menu.find({})
+        } else {
+            const roles = await Role.find({ _id: { $in: roleList } }); // 非管理员先获取角色再合并角色拥有的菜单
+            let permissionList = [];
+            roles.map(item => {
+                const { checkedKeys, halfCheckedKeys } = item.permissionList;   //聚合查询角色拥有的菜单权限
+                permissionList = permissionList.concat([...checkedKeys, ...halfCheckedKeys])
+            })
+            permissionList = [...new Set(permissionList)];// 去除重复值再转换为数组
+            rawList = await Menu.find({ _id: { $in: permissionList } }); // 通过权限列表查询出菜单列表 $in:包含的条件
+        }
+        return util.getMenuTree(rawList, null, []);
+    };
+});
+
 
 module.exports = router;

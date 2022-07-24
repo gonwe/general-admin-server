@@ -1,7 +1,9 @@
 /**
  * 通用函数封装
  */
+const jwt = require("jsonwebtoken");
 const log4js = require("./log4j");
+
 
 const CODE = {
     SUCCESS: 200,
@@ -50,4 +52,32 @@ module.exports = {
         };
     },
     CODE,
+
+    decoded(authorization, secret) {
+        const token = authorization.split(" ")[1];
+        if (token) {
+            return jwt.verify(token, secret);
+        } else {
+            return null;
+        }
+    },
+
+    getMenuTree(orgList, id, list) {
+        orgList.forEach(item => {
+            if (item.parentId.slice().pop() == id || String(item.parentId.slice().pop()) === String(id)) {
+                list.push(item._doc);
+            }
+        })
+        list.map(item => {
+            item.children = [];
+            this.getMenuTree(orgList, item._id, item.children);
+            if (item.children.length == 0) {
+                delete item.children;
+            } else if (item.children.length > 0 && item.children[0].menuType == 2) {
+                item.action = item.children;
+            }
+        });
+
+        return list;
+    }
 };

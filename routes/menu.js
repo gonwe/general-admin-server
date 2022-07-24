@@ -10,29 +10,11 @@ router.get("/list", async (ctx, next) => {
     if (menuName) params.menuName = menuName;
     if (menuState) params.menuState = Number(menuState);
     const orgList = await Menu.find(params) || [];
-    const list = getTree(orgList, null, []);
+    const list = await util.getMenuTree(orgList, null, []);
     ctx.body = util.success(list, '菜单列表查询成功');
 })
 
-//递归查询所有的子菜单
-function getTree(orgList, id, list) {
-    orgList.forEach(item => {
-        if (item.parentId.slice().pop() == id || String(item.parentId.slice().pop()) === String(id)) {
-            list.push(item._doc);
-        }
-    })
-    list.map(item => {
-        item.children = [];
-        getTree(orgList, item._id, item.children);
-        if (item.children.length == 0) {
-            delete item.children;
-        } else if (item.children.length > 0 && item.children[0].menuType == 2) {
-            item.action = item.children;
-        }
-    });
 
-    return list;
-}
 
 router.post("/operate", async (ctx) => {
     const { _id, action, ...params } = ctx.request.body;
