@@ -68,6 +68,16 @@ router.get("/list", async (ctx) => {
     }
 });
 
+// 用户列表
+router.get("/all/list", async (ctx) => {
+    try {
+        const list = await User.find({}, "userId userName userEmail");
+        ctx.body = util.success(list, "查询用户列表成功！");
+    } catch (error) {
+        ctx.body = util.fail(`查询用户列表异常：${error.stack}`);
+    }
+});
+
 // 用户删除
 router.post("/delete", async (ctx) => {
     const { userIds } = ctx.request.body;
