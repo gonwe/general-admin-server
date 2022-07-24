@@ -8,9 +8,9 @@ const log4js = require("./utils/log4j");
 const users = require("./routes/users");
 const menu = require("./routes/menu");
 const role = require("./routes/roles");
+const dept = require("./routes/depts");
 const router = require("koa-router")();
 const bodyparser = require("koa-bodyparser");
-const jwt = require("jsonwebtoken")
 const koajwt = require("koa-jwt");
 const util = require("./utils/util");
 
@@ -57,20 +57,12 @@ app.use(koajwt({ secret: "gonwe" }).unless({ path: [/^\/api\/users\/login/] }))
 // routes
 router.prefix("/api");
 
-// router.get("/leave/count",(ctx)=>{
-//   // const token = ctx.request.headers.authorization.split(" ")[1]
-//   // // console.log(ctx.request.headers);
-//   // const playload = jwt.verify(token,"gonwe")
-//   ctx.body="nody"
-// })
-
 router.use(users.routes(), users.allowedMethods());
 router.use(menu.routes(), menu.allowedMethods());
 router.use(role.routes(), role.allowedMethods());
-
+router.use(dept.routes(), dept.allowedMethods());
 
 app.use(router.routes(), users.allowedMethods());
-
 
 
 
