@@ -2,7 +2,8 @@ const router = require("koa-router")();
 const Role = require("../models/roleSchema");
 const util = require("../utils/util");
 
-router.prefix("/role");
+router.prefix("/roles");
+
 
 router.get("/list", async (ctx, next) => {
     const { roleName } = ctx.request.query;
@@ -25,6 +26,14 @@ router.get("/list", async (ctx, next) => {
     }
 })
 
+router.get("/alllist", async (ctx) => {
+    try {
+        ctx.body = util.success(await Role.find({}, "_id roleName"));
+    } catch (error) {
+        ctx.body = util.fail(`查询异常：${error.stack}`);
+    }
+})
+
 
 router.post("/operate", async (ctx) => {
     const { _id, action, ...params } = ctx.request.body;
@@ -38,23 +47,22 @@ router.post("/operate", async (ctx) => {
             info = "编辑成功！";
         } else if (action == "delete") {
             res = await Role.findByIdAndRemove(_id, params);
-            await Role.deleteMany({ parentId: { $all: _id } });
             info = "删除成功！";
         }
         ctx.body = util.success(res, info);
     } catch (error) {
         info = `操作异常：${error.stack}`;
-        ctx.body = util.error(null, info);
+        ctx.body = util.fail(null, info);
     }
 });
 
 router.post("/update/permission", async (ctx) => {
     const { _id, permissionList } = ctx.request.body;
     try {
-        const res = await Role.findByIdAndUpdate(_id, { permissionList });
+        const res = await Role.findByIdAndUpdate(_id, { permissionList, updateTime: new Date() });
         ctx.body = util.success(res, "更新成功！");
     } catch (error) {
-        ctx.body = util.error(null, `更新异常：${error.stack}`);
+        ctx.body = util.fail(null, `更新异常：${error.stack}`);
     }
 })
 module.exports = router;
