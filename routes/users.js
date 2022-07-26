@@ -175,9 +175,8 @@ router.get("/getPermissions", async (ctx) => {
     const { data: userInfo } = decoded(authorization, "gonwe");
     // 通过token获取的用户ID和角色列表
     const menuList = await getTree(userInfo.role, userInfo.roleList);
-    ctx.body = util.success(menuList, "获取权限列表成功！");
-
-
+    const actionList = getActionList(menuList);
+    ctx.body = util.success({ menuList, actionList }, "获取权限列表成功！");
     /**
      * 通过角色列表获取菜单列表
      * @param {Number} role 角色
@@ -203,5 +202,21 @@ router.get("/getPermissions", async (ctx) => {
     };
 });
 
+function getActionList(menuList) {
+    let actionList = [];
+    const deep = (list) => {
+        list.map(item => {
+            if (item.action) {
+                item.action.map((ac) => {
+                    actionList.push(ac.menuCode);
+                })
+            } else if (item.children && !item.action) {
+                deep(item.children);
+            }
+        });
+    }
+    deep(menuList)
+    return actionList;
+}
 
 module.exports = router;
