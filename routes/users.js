@@ -24,24 +24,25 @@ router.post("/login", async (ctx) => {
          * 3.().select('userName userId')字符串内用空格隔开
          */
         const res = await User.findOne({ userName, userPwd }).select(
-            "userId userName userEmail role deptId roleList "
+            "userId userName userEmail role deptId roleList"
         );
-        const data = res._doc;
-        const token = jwt.sign(
-            {
-                data,
-            },
-            "gonwe",
-            { expiresIn: "1h" }
-        );
-        data.token = token;
         if (res) {
+            const data = res._doc;
+            const token = jwt.sign(
+                {
+                    data,
+                },
+                "gonwe",
+                { expiresIn: "1h" }
+            );
+            data.token = token;
             ctx.body = util.success(data, "登录成功！");
         } else {
             ctx.body = util.fail("账号或者密码不正确", util.CODE.USER_LOGIN_ERROR);
         }
+
     } catch (error) {
-        ctx.body = util.fail(error.msg, util.CODE.USER_LOGIN_ERROR);
+        ctx.body = util.fail(error.stack, util.CODE.USER_LOGIN_ERROR);
     }
 });
 
